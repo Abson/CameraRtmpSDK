@@ -25,7 +25,7 @@ namespace PushSDK { namespace rtmp {
     }
 
     void
-    H264Packetizer::pushBuffer(const uint8_t *const inBuffer, size_t size)
+    H264Packetizer::pushBuffer(const uint8_t *const inBuffer, size_t size, const IMetadata& metadata)
     {
         std::vector<uint8_t>& outBuffer = m_outbuffer;
         outBuffer.clear();

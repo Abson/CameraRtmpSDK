@@ -16,7 +16,7 @@ namespace PushSDK {
     class ITransform: public IOutput
     {
     public:
-        virtual void setOutput(IOutput* output) = 0;
+        virtual void setOutput(std::shared_ptr<IOutput>output) = 0;
         
         virtual ~ITransform() {};
     };

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Abson. All rights reserved.
 //
 
-#ifndef Apple_CameraSource_h
-#define Apple_CameraSource_h
+#ifndef __Apple_CameraSource_h
+#define __Apple_CameraSource_h
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>

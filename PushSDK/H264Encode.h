@@ -40,12 +40,12 @@ namespace PushSDK { namespace ffmpeg {
         ~H264Encode();
 
     public:
-        void setOutput(IOutput* output) {m_output = output;}
+        void setOutput(std::shared_ptr<IOutput> output) {m_output = output;}
 
         // Input is expecting a CVPixelBufferRef
-        void pushBuffer(const uint8_t* const data, size_t size);
+        void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata);
 
-        void stopPushBuffer();
+        void stop();
 
     public:
 
@@ -61,7 +61,7 @@ namespace PushSDK { namespace ffmpeg {
         void stopPushEncode();
 
     private:
-        IOutput* m_output;
+        std::weak_ptr<IOutput> m_output;
 
         int m_bitrate;
 
@@ -85,6 +85,7 @@ namespace PushSDK { namespace ffmpeg {
         AVOutputFormat* m_out_fmt;
         AVCodec* m_codec;
         AVPacket m_pkt;
+
 
         uint8_t* m_pic_buf;
 

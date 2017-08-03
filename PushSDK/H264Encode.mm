@@ -193,7 +193,7 @@ namespace PushSDK { namespace  ffmpeg {
     }
 
     void
-    H264Encode::pushBuffer(const uint8_t* const data, size_t size)
+    H264Encode::pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata)
     {
         CVPixelBufferRef imageBuffer = (CVPixelBufferRef)data;
 
@@ -280,7 +280,7 @@ namespace PushSDK { namespace  ffmpeg {
     }
 
     void
-    H264Encode::stopPushBuffer()
+    H264Encode::stop()
     {
         stopPushEncode();
     }

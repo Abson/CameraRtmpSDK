@@ -21,7 +21,7 @@ namespace PushSDK { namespace rtmp {
         H264Packetizer(int ctsOffset = 0);
 
     public:
-        void pushBuffer(const uint8_t* const data, size_t size);
+        void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata);
 
         void stopPushBuffer() {}
 

@@ -130,7 +130,7 @@ namespace PushSDK {  namespace Apple {
 
         // 停止推流了，关闭所有资源
         dispatch_async(m_camera_queue, ^{
-            m_output->stopPushBuffer();
+            m_output->stop();
         });
 
         if (m_callbackSession)
