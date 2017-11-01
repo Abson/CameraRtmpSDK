@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1403f2b0-3859-45b9-890c-077d09f6b34a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDelegate.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Base.lproj/LaunchScreen.storyboard" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Base.lproj/Main.storyboard" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PrefixHeader.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/AACEncoder.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/AACEncoder.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/AACParser.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/AACParser.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/ABSPreviewView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/ABSPreviewView.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/ABSSimpleSession.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/ABSSimpleSession.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/CameraSource.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/CameraSource.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/avcodec.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/avdct.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/avfft.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/d3d11va.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/dirac.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/dv_profile.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/dxva2.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/qsv.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/vaapi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/vda.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/vdpau.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/videotoolbox.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/vorbis_parser.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavcodec/xvmc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavdevice/avdevice.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavdevice/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavfilter/avfilter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavfilter/avfiltergraph.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavfilter/buffersink.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavfilter/buffersrc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavfilter/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavformat/avformat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavformat/avio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavformat/url.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavformat/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/adler32.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/aes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/aes_ctr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/attributes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/audio_fifo.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/avassert.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/avconfig.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/avstring.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/avutil.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/base64.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/blowfish.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/bprint.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/bswap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/buffer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/camellia.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/cast5.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/channel_layout.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/common.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/cpu.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/crc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/des.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/dict.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/display.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/downmix_info.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/error.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/eval.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/ffversion.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/fifo.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/file.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/frame.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/hash.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/hmac.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/imgutils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/intfloat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/intreadwrite.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/lfg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/log.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/lzo.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/macros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/mastering_display_metadata.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/mathematics.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/md5.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/mem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/motion_vector.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/murmur3.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/opt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/parseutils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/pixdesc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/pixelutils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/pixfmt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/random_seed.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/rational.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/rc4.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/replaygain.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/ripemd.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/samplefmt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/sha.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/sha512.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/stereo3d.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/tea.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/threadmessage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/time.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/timecode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/timestamp.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/tree.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/twofish.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libavutil/xtea.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libpostproc/postprocess.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libpostproc/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libswresample/swresample.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libswresample/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libswscale/swscale.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/include/libswscale/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libavcodec.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libavdevice.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libavfilter.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libavformat.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libavutil.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libpostproc.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libswresample.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/lib/libswscale.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/x264-iOS/include/x264.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/x264-iOS/include/x264_config.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/FFmpeg-iOS/x264-iOS/lib/libx264.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/H264Encode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/H264Encode.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/H264Packetizer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/H264Packetizer.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/H264Parser.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/H264Parser.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/IEncoder.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/IOutput.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/IPixleBuffer.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/ITransform.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/ITransform.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/MicSource.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/MicSource.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/PixelBuffer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/PixelBuffer.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/transforms/IAudioMixer.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/transforms/IMetaData.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/transforms/IMetaData.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ViewController.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/main.m" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_0c0b0d4e13d59c1b23b517e96f72f9b84209da19" />
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="avcodec.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avcodec.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="562" column="9" lean-forward="false" selection-start-line="562" selection-start-column="9" selection-end-line="562" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="avutil.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avutil.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="192" column="14" lean-forward="true" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="142" />
+    <option name="y" value="22" />
+    <option name="width" value="1235" />
+    <option name="height" value="878" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
+              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
+              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
+              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CameraRtmpSDK">
+    <configuration name="CameraRtmpSDK" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CameraRtmpSDK" TARGET_NAME="CameraRtmpSDK" CONFIG_NAME="Debug" SCHEME_NAME="CameraRtmpSDK" RUN_TARGET_PROJECT_NAME="CameraRtmpSDK" RUN_TARGET_NAME="CameraRtmpSDK" MAKE_ACTIVE="TRUE">
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1403f2b0-3859-45b9-890c-077d09f6b34a" name="Default" comment="" />
+      <created>1509548032987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1509548032987</updated>
+      <workItem from="1509548034511" duration="49000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="49000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="142" y="22" width="1235" height="878" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avcodec.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="562" column="9" lean-forward="false" selection-start-line="562" selection-start-column="9" selection-end-line="562" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avutil.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="192" column="14" lean-forward="true" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

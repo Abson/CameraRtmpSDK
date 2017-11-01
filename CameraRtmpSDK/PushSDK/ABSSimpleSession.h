@@ -28,6 +28,18 @@ typedef NS_ENUM(NSInteger, ABSCameraState) {
 
 @property (nonatomic, weak) id<ABSSessionDelegate> delegate;
 
+
+/**
+ Record Video Method
+
+ @param videoSize
+ @param fps
+ @param bps
+ @param useInterfaceOrientation
+ @param cameraState
+ @param previewFrame
+ @return
+ */
 - (instancetype)initWithVideoSize:(CGSize)videoSize
                               fps:(int)fps
                           bitrate:(int)bps
@@ -35,9 +47,28 @@ typedef NS_ENUM(NSInteger, ABSCameraState) {
                       cameraState:(ABSCameraState)cameraState
                      previewFrame:(CGRect)previewFrame;
 
-- (void)startRecord;
 
-- (void)endRecord;
+/**
+ Record Audio
+
+ @param rate
+ @param fps
+ @param bps
+ @param startRecord
+ @return
+ */
+- (instancetype)initWithAudioSampleRate:(float)rate
+                                    fps:(int)fps
+                                bitrate:(int)bps
+                           channelCount:(int)count;
+
+- (void)startVideoRecord;
+
+- (void)startAudioRecord;
+
+- (void)endAudioRecord;
+
+- (void)endVidoeRecord;
 
 - (ABSPreviewView *)previewView;
 

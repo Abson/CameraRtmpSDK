@@ -10,7 +10,7 @@
 #import "ABSSimpleSession.h"
 #import "ABSPreviewView.h"
 #import <AVFoundation/AVFoundation.h>
-#import "H264Encode.h"
+//#import "H264Encode.h"
 
 @interface ViewController ()<ABSSessionDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
@@ -35,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // example for record audio
     self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480) fps:30 bitrate:1000000 useInterfaceOrientation:true cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
     self.session.delegate = self;
     [self.view addSubview:self.session.previewView];
@@ -110,10 +111,10 @@
     if (sender.isSelected) {
 //        encoder = new PushSDK::ffmpeg::H264Encode(640, 480, 30,1000000);
 //        [captureSession startRunning];
-        [self.session startRecord];
+        [self.session startVideoRecord];
     }
     else {
-        [self.session endRecord];
+        [self.session endVidoeRecord];
 //        [captureSession stopRunning];
 //        encoder->stopPushEncode();
     }

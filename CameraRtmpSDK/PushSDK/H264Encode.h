@@ -17,16 +17,17 @@
 #include <CoreVideo/CoreVideo.h>
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
+
 #include <libavutil/opt.h>
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <libswscale/swscale.h>
 #include <libavutil/imgutils.h>
+
 #ifdef __cplusplus
-};
+}
 #endif
 
 namespace PushSDK { namespace ffmpeg {

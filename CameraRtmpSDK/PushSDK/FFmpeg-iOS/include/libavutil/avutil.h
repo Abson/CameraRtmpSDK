@@ -188,7 +188,7 @@ const char *avutil_license(void);
  * @brief Media Type
  */
 
-enum AVMediaType {
+enum ffmpeg_AVMediaType {
     AVMEDIA_TYPE_UNKNOWN = -1,  ///< Usually treated as AVMEDIA_TYPE_DATA
     AVMEDIA_TYPE_VIDEO,
     AVMEDIA_TYPE_AUDIO,
@@ -202,7 +202,7 @@ enum AVMediaType {
  * Return a string describing the media_type enum, NULL if media_type
  * is unknown.
  */
-const char *av_get_media_type_string(enum AVMediaType media_type);
+const char *av_get_media_type_string(enum ffmpeg_AVMediaType media_type);
 
 /**
  * @defgroup lavu_const Constants

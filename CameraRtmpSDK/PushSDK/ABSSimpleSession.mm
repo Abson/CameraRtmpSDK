@@ -35,13 +35,22 @@
 @implementation ABSSimpleSession
 - (void)dealloc
 {
-    [self endSession];
+    [self endVidoeRecord];
+    [self endAudioRecord];
 
     Cplus_Release(m_cameraSource);
     Cplus_Release(m_h264Encoder);
     Cplus_Release(m_micSource);
 }
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+
+
+    }
+    return self;
+}
 
 - (instancetype)initWithVideoSize:(CGSize)videoSize
                               fps:(int)fps
@@ -57,8 +66,6 @@
         self.bitrate = bps;
         self.useInterfaceOrientation = useInterfaceOrientation;
         self.cameraState = cameraState;
-        self.audioSampleRate = (float) 44100.; // 最多只能用 44KHZ，因为 flv 格式不支持 44KHZ 以上。
-        self.audioChannelCount = 2;
 
         _previewView = [[ABSPreviewView alloc] initWithFrame:CGRectMake(0, 0, previewFrame.size.width, previewFrame.size.height)];
 
@@ -72,27 +79,47 @@
     return self;
 }
 
+
+- (instancetype)initWithAudioSampleRate:(float)rate
+                                    fps:(int)fps
+                                bitrate:(int)bps
+                           channelCount:(int)count
+{
+    if (self = [super init]) {
+        self.audioSampleRate = rate > 0 ? rate : (float) 44100.; // 最多只能用 44KHZ，因为 flv 格式不支持 44KHZ 以上。
+        self.fps = fps;
+        self.bitrate = bps;
+        self.audioChannelCount = count > 0 ? count : 2;
+
+        [self setUpMicSource];
+    }
+    return self;
+}
+
 - (void)setupGraph
 {
-    /*
     m_cameraSource = new PushSDK::Apple::CameraSource();
     m_cameraSource->setupCamera(self.fps, (_cameraState == ABSCameraStateFront), true, AVCaptureSessionPreset640x480);
     CALayer* previeLayer = m_cameraSource->captureVideoPreviewLayer();
     previeLayer.frame = self.previewView.bounds;
     [self.previewView.layer addSublayer:previeLayer];
-     */
+}
 
+- (void)setUpMicSource
+{
     m_micSource = new PushSDK::Apple::MicSource(self.audioSampleRate, self.audioChannelCount);
 }
 
-- (void)startRecord
+
+- (void)startVideoRecord
 {
-    /*
     m_h264Encoder = new PushSDK::ffmpeg::H264Encode(self.videoSize.width, self.videoSize.height, self.fps, self.bitrate);
     m_cameraSource->setOutput(m_h264Encoder);
     m_cameraSource->startRecord();
-     */
+}
 
+- (void)startAudioRecord
+{
     NSString *date = nil;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"YYYY-MM-dd hh:mm:ss";
@@ -103,22 +130,15 @@
     m_micSource->start();
 }
 
-- (void)endRecord
+- (void)endAudioRecord
 {
-    [self endSession];
+     m_micSource->stop();
 }
 
-- (void)endSession
+- (void)endVidoeRecord
 {
-//    m_cameraSource->stopRecord();
-    m_micSource->stop();
-
-    // 确保 pushBuffer 方法已经编码完才调用
-    //    dispatch_queue_t cameraQueue = m_cameraSource->cameraRecordQueue();
-    // dispatch_async(cameraQueue, ^{
-    // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    // });
-    //    });
+     m_cameraSource->stopRecord();
 }
+
 
 @end

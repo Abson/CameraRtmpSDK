@@ -2217,7 +2217,7 @@ void av_program_add_stream_index(AVFormatContext *ac, int progid, unsigned int i
  *        NULL, then *decoder_ret is guaranteed to be set to a valid AVCodec.
  */
 int av_find_best_stream(AVFormatContext *ic,
-                        enum AVMediaType type,
+                        enum ffmpeg_AVMediaType type,
                         int wanted_stream_nb,
                         int related_stream,
                         AVCodec **decoder_ret,
@@ -2512,7 +2512,7 @@ AVOutputFormat *av_guess_format(const char *short_name,
  */
 enum AVCodecID av_guess_codec(AVOutputFormat *fmt, const char *short_name,
                             const char *filename, const char *mime_type,
-                            enum AVMediaType type);
+                            enum ffmpeg_AVMediaType type);
 
 /**
  * Get timing information for the data currently output.
