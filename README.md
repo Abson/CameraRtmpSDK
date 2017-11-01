@@ -11,3 +11,6 @@ hope it can help you.
 [深入浅出理解视频编码H264结构](http://simplecodesky.com/2016/11/15/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%90%86%E8%A7%A3%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81H264%E7%BB%93%E6%9E%84/)
 
 i did write a blog to introduce this project , hope it can help you to comprehend it.
+
+### Update
+2017.11.1 Update project to runnable and and Test API, enjoy it
