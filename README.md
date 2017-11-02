@@ -42,4 +42,4 @@ self.session.delegate = self;
 ```
 
 ### Update
-2017.11.1 Update project to runnable and and Test API, enjoy it
+2017.11.1 Update project to runnable and and modify test API, enjoy it
