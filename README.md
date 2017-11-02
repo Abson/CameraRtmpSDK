@@ -16,7 +16,11 @@ i did write a blog to introduce this project , hope it can help you to comprehen
 If you want to test Vido (H.264), fllow this.
 
 ```object-c
-self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480) fps:30 bitrate:1000000 useInterfaceOrientation:true cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
+self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
+                                                       fps:30
+                                                   bitrate:1000000
+                                   useInterfaceOrientation:true
+                                               cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
 self.session.delegate = self;
 [self.view addSubview:self.session.previewView];
 
