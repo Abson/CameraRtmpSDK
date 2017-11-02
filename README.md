@@ -14,7 +14,8 @@ i did write a blog to introduce this project , hope it can help you to comprehen
 
 ### How to Use
 If you want to test Vido (H.264), fllow this.
-```cpp
+
+```object-c
 self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480) fps:30 bitrate:1000000 useInterfaceOrientation:true cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
 self.session.delegate = self;
 [self.view addSubview:self.session.previewView];
@@ -26,7 +27,8 @@ self.session.delegate = self;
 ```
 
 But if you want to test audio (AAC)
-```
+
+```object-c
 self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:44100. channelCount:2];
 self.session.delegate = self;
 [self.session startAudioRecord];
