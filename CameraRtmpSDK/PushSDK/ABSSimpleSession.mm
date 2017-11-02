@@ -81,14 +81,10 @@
 
 
 - (instancetype)initWithAudioSampleRate:(float)rate
-                                    fps:(int)fps
-                                bitrate:(int)bps
-                           channelCount:(int)count
+                           channelCount:(int)count;
 {
     if (self = [super init]) {
         self.audioSampleRate = rate > 0 ? rate : (float) 44100.; // 最多只能用 44KHZ，因为 flv 格式不支持 44KHZ 以上。
-        self.fps = fps;
-        self.bitrate = bps;
         self.audioChannelCount = count > 0 ? count : 2;
 
         [self setUpMicSource];

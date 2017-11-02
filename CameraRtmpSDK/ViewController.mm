@@ -35,8 +35,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // example for record audio
-    self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480) fps:30 bitrate:1000000 useInterfaceOrientation:true cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
+    // example for vido recording
+    self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
+                                                           fps:30
+                                                       bitrate:1000000
+                                       useInterfaceOrientation:true
+                                                   cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
     self.session.delegate = self;
     [self.view addSubview:self.session.previewView];
 

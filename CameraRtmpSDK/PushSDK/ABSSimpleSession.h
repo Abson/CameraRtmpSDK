@@ -52,14 +52,10 @@ typedef NS_ENUM(NSInteger, ABSCameraState) {
  Record Audio
 
  @param rate
- @param fps
- @param bps
  @param startRecord
  @return
  */
 - (instancetype)initWithAudioSampleRate:(float)rate
-                                    fps:(int)fps
-                                bitrate:(int)bps
                            channelCount:(int)count;
 
 - (void)startVideoRecord;
