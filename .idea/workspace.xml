@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1403f2b0-3859-45b9-890c-077d09f6b34a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio1.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio2.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio3.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio4.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Muxer/flv_muxer.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Muxer/flv_muxer.h" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CameraRtmpSDK.xcodeproj/project.pbxproj" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/AACEncoder.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/AACEncoder.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/CameraSource.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/CameraSource.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Encode.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Encode.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/MicSource.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/MicSource.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IAudioMixer.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IAudioMixer.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,8 +25,8 @@
       <file leaf-file-name="audio_mixer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="557">
+              <caret line="456" column="0" lean-forward="true" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +65,8 @@
       <file leaf-file-name="ViewController.mm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+            <state relative-caret-position="270">
+              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="154" selection-end-column="118" />
               <folding>
                 <element signature="e#131#157#0" expanded="true" />
               </folding>
@@ -96,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/main.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,8 +107,8 @@
       <file leaf-file-name="audio_mixer.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding>
                 <element signature="e#163#180#0" expanded="true" />
                 <element signature="e#257#283#0" expanded="true" />
@@ -204,10 +186,10 @@
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avstring.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avcodec.h" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer_orig.h" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" />
       </list>
     </option>
   </component>
@@ -219,7 +201,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="107" />
+    <option name="x" value="157" />
     <option name="y" value="23" />
     <option name="width" value="1297" />
     <option name="height" value="877" />
@@ -333,15 +315,15 @@
       <workItem from="1512784970945" duration="336000" />
       <workItem from="1513043742488" duration="1951000" />
       <workItem from="1513740633723" duration="48567000" />
-      <workItem from="1513908511296" duration="2837000" />
+      <workItem from="1513908511296" duration="3416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74078000" />
+    <option name="totallyTimeSpent" value="74657000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="23" width="1297" height="877" extended-state="0" />
+    <frame x="157" y="23" width="1297" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -702,17 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#163#180#0" expanded="true" />
-            <element signature="e#257#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/sys/_types/_clock_t.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -732,23 +703,34 @@
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/main.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="e#163#180#0" expanded="true" />
+            <element signature="e#257#283#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="557">
+          <caret line="456" column="0" lean-forward="true" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+        <state relative-caret-position="270">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="154" selection-end-column="118" />
           <folding>
             <element signature="e#131#157#0" expanded="true" />
           </folding>

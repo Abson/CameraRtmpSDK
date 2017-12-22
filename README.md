@@ -13,7 +13,7 @@ hope it can help you.
 i did write a blog to introduce this project , hope it can help you to comprehend it.
 
 ### How to Use
-If you want to test Vido (H.264), fllow this.
+**If you want to test Vido (H.264), fllow this.**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
@@ -30,7 +30,7 @@ self.session.delegate = self;
 [self.session endVidoeRecord];
 ```
 
-But if you want to test audio (AAC)
+**if you want to test audio (AAC)**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:44100. channelCount:2];
@@ -39,6 +39,26 @@ self.session.delegate = self;
 
 // close it 
 [self.session endAudioRecord];
+```
+
+**if you want to test amix of ffmpeg**
+fllow this
+```
+NSString* path1 = [[NSBundle mainBundle] pathForResource:@"audio1.wav" ofType:nil];
+NSString* path2 = [[NSBundle mainBundle] pathForResource:@"audio2.wav" ofType:nil];
+NSString* outputPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:@"audio127.wav"];
+
+const char* input1 = [path1 cStringUsingEncoding:NSUTF8StringEncoding];
+const char* input2 = [path2 cStringUsingEncoding:NSUTF8StringEncoding];
+const char* output = [outputPath cStringUsingEncoding:NSUTF8StringEncoding];
+
+std::vector<std::string> inputs{std::string(input1), std::string(input2)};
+
+clock_t start_time = clock();
+PushSDK::ffmpeg::audio_mixer mixer(inputs, output);
+mixer.StartMixAudio();
+clock_t end_time= clock();
+std::cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS_PER_SEC*1000<<"ms"<< std::endl;//
 ```
 
 ### Update

@@ -590,7 +590,7 @@ input --> split ---------------------> overlay --> output
           data_present, &input_packet)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not decode frame (error '%s')\n",
             get_error_text(error));
-        av_free_packet(&input_packet);
+        av_packet_unref(&input_packet);
         return error;
       }
 
@@ -600,7 +600,7 @@ input --> split ---------------------> overlay --> output
        */
       if (*finished && *data_present)
         *finished = 0;
-      av_free_packet(&input_packet);
+      av_packet_unref(&input_packet);
       return 0;
     }
 
@@ -623,7 +623,7 @@ input --> split ---------------------> overlay --> output
           frame, data_present)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not encode frame (error '%s')\n",
             get_error_text(error));
-        av_free_packet(&output_packet);
+        av_packet_unref(&output_packet);
         return error;
       }
 
@@ -632,11 +632,11 @@ input --> split ---------------------> overlay --> output
         if ((error = av_write_frame(output_fmt_ctx, &output_packet)) < 0) {
           av_log(NULL, AV_LOG_ERROR, "Could not write frame (error '%s')\n",
               get_error_text(error));
-          av_free_packet(&output_packet);
+          av_packet_unref(&output_packet);
           return error;
         }
 
-        av_free_packet(&output_packet);
+        av_packet_unref(&output_packet);
       }
 
       return 0;

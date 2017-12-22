@@ -33,27 +33,18 @@ namespace PushSDK {namespace ffmpeg {
     class audio_mixer {
     public:
 
-//       audio_mixer(const std::string& left_input,
-//          const std::string& right_input2,
-//          const std::string& output);
-
        audio_mixer(std::vector<std::string>& inputs, const std::string& output);
 
       void StartMixAudio();
 
     private:
-//      AVFormatContext* input_fmt_ctx0_;
-//      AVFormatContext* input_fmt_ctx1_;
+
       AVFormatContext* output_fmt_ctx_;
       std::vector<AVFormatContext*> input_fmt_ctxs_;
 
-//      AVCodecContext* input_codec_ctx0_;
-//      AVCodecContext* input_codec_ctx1_;
       AVCodecContext* output_codec_ctx_;
       std::vector<AVCodecContext*> input_codec_ctxs_;
 
-//      AVFilterContext* scr0_;
-//      AVFilterContext* scr1_;
       AVFilterContext* sink_;
       std::vector<AVFilterContext*> srcs_;
 
