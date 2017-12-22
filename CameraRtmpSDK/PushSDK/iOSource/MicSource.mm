@@ -106,7 +106,7 @@ namespace PushSDK { namespace Apple {
                 desc.mSampleRate = bThis->m_sampleRate;
                 desc.mFormatID = kAudioFormatLinearPCM;
                 desc.mFormatFlags = (kAudioFormatFlagIsSignedInteger | kAudioFormatFlagsNativeEndian | kAudioFormatFlagIsPacked);
-                desc.mChannelsPerFrame = bThis->m_channelCount;
+                desc.mChannelsPerFrame = static_cast<UInt32>(bThis->m_channelCount);
                 desc.mBitsPerChannel = 16;
                 desc.mFramesPerPacket = 1;
                 desc.mBytesPerFrame = desc.mBitsPerChannel / 8 * m_channelCount;
@@ -142,7 +142,7 @@ namespace PushSDK { namespace Apple {
     }
 
     void
-    MicSource::inputCallback(uint8_t *data, size_t data_size, int inNumberFrames)
+    MicSource::inputCallback(uint8_t *data, size_t data_size, uint32_t inNumberFrames)
     {
         auto output = m_output.lock();
         if (output) {

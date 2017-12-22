@@ -8,7 +8,7 @@
 
 #include "AACEncoder.hpp"
 //#include <stdio.h>
-#include "FFmpeg-iOS/include/libswresample/swresample.h"
+#include "swresample.h"
 
 inline static bool check_sample_fmt(AVCodec* codec, enum AVSampleFormat sample_fmt)
 {

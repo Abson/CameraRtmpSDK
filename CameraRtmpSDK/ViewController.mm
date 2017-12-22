@@ -10,7 +10,11 @@
 #import "ABSSimpleSession.h"
 #import "ABSPreviewView.h"
 #import <AVFoundation/AVFoundation.h>
+#import <iostream>
 //#import "H264Encode.h"
+#include "audio_mixer.h"
+
+#define kTestAudioMixer 1 // a switch to open audio mixer
 
 @interface ViewController ()<ABSSessionDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
@@ -33,95 +37,124 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
 
-    // example for vido recording
-    self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
-                                                           fps:30
-                                                       bitrate:1000000
-                                       useInterfaceOrientation:true
-                                                   cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
-    self.session.delegate = self;
-    [self.view addSubview:self.session.previewView];
+  // example for vido recording
+  /*
+  self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
+                                                         fps:30
+                                                     bitrate:1000000
+                                     useInterfaceOrientation:true
+                                                 cameraState:ABSCameraStateFront previewFrame:self.view.bounds];
+  self.session.delegate = self;
+  [self.view addSubview:self.session.previewView];
+   */
 
-    /*
-    captureSession = [[AVCaptureSession alloc] init];
-    //    captureSession.sessionPreset = AVCaptureSessionPresetHigh;
-    if ([captureSession canSetSessionPreset:AVCaptureSessionPreset640x480]) {
-        captureSession.sessionPreset = AVCaptureSessionPreset640x480;
-    }
+  /*
+  captureSession = [[AVCaptureSession alloc] init];
+  //    captureSession.sessionPreset = AVCaptureSessionPresetHigh;
+  if ([captureSession canSetSessionPreset:AVCaptureSessionPreset640x480]) {
+      captureSession.sessionPreset = AVCaptureSessionPreset640x480;
+  }
 
 
-    // captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+  // captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
 
-    int position =  AVCaptureDevicePositionFront;
-        
-    NSArray* devices = [AVCaptureDevice devices];
-    for (AVCaptureDevice* device in devices) {
-        if ([device hasMediaType:AVMediaTypeVideo] && device.position == position ) {
-            captureDevice= device;
-        }
-    }
+  int position =  AVCaptureDevicePositionFront;
 
-    NSError *error = nil;
-    captureDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:&error];
+  NSArray* devices = [AVCaptureDevice devices];
+  for (AVCaptureDevice* device in devices) {
+      if ([device hasMediaType:AVMediaTypeVideo] && device.position == position ) {
+          captureDevice= device;
+      }
+  }
 
-    if([captureSession canAddInput:captureDeviceInput])
-        [captureSession addInput:captureDeviceInput];
-    else
-        NSLog(@"Error: %@", error);
+  NSError *error = nil;
+  captureDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:&error];
 
-    dispatch_queue_t queue = dispatch_queue_create("myEncoderH264Queue", NULL);
+  if([captureSession canAddInput:captureDeviceInput])
+      [captureSession addInput:captureDeviceInput];
+  else
+      NSLog(@"Error: %@", error);
 
-    captureVideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
-    [captureVideoDataOutput setSampleBufferDelegate:self queue:queue];
-    NSDictionary *settings = [[NSDictionary alloc] initWithObjectsAndKeys:
-                              [NSNumber numberWithUnsignedInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange],
-                              kCVPixelBufferPixelFormatTypeKey,
-                              nil]; // X264_CSP_NV12
-    captureVideoDataOutput.videoSettings = settings;
-    captureVideoDataOutput.alwaysDiscardsLateVideoFrames = YES;
+  dispatch_queue_t queue = dispatch_queue_create("myEncoderH264Queue", NULL);
 
-    if ([captureSession canAddOutput:captureVideoDataOutput]) {
-        [captureSession addOutput:captureVideoDataOutput];
-    }
+  captureVideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
+  [captureVideoDataOutput setSampleBufferDelegate:self queue:queue];
+  NSDictionary *settings = [[NSDictionary alloc] initWithObjectsAndKeys:
+                            [NSNumber numberWithUnsignedInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange],
+                            kCVPixelBufferPixelFormatTypeKey,
+                            nil]; // X264_CSP_NV12
+  captureVideoDataOutput.videoSettings = settings;
+  captureVideoDataOutput.alwaysDiscardsLateVideoFrames = YES;
 
-    // 保存Connection，用于在SampleBufferDelegate中判断数据来源（是Video/Audio？）
-    videoCaptureConnection = [captureVideoDataOutput connectionWithMediaType:AVMediaTypeVideo];
+  if ([captureSession canAddOutput:captureVideoDataOutput]) {
+      [captureSession addOutput:captureVideoDataOutput];
+  }
+
+  // 保存Connection，用于在SampleBufferDelegate中判断数据来源（是Video/Audio？）
+  videoCaptureConnection = [captureVideoDataOutput connectionWithMediaType:AVMediaTypeVideo];
 
 #pragma mark -- AVCaptureVideoPreviewLayer init
-    previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:captureSession];
-    previewLayer.frame = self.view.layer.bounds;
-    previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill; // 设置预览时的视频缩放方式
-    [[previewLayer connection] setVideoOrientation:AVCaptureVideoOrientationPortrait]; // 设置视频的朝向
-    [self.view.layer addSublayer:previewLayer];
-     */
-    UIButton* record = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 50)];
-    record.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height - 75);
-    [record setBackgroundColor:[UIColor greenColor]];
-    [record setTitle:@"录制" forState:UIControlStateNormal];
-    [record setTitle:@"取消录制" forState:UIControlStateSelected];
-    [record addTarget:self action:@selector(record:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:record];
+  previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:captureSession];
+  previewLayer.frame = self.view.layer.bounds;
+  previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill; // 设置预览时的视频缩放方式
+  [[previewLayer connection] setVideoOrientation:AVCaptureVideoOrientationPortrait]; // 设置视频的朝向
+  [self.view.layer addSublayer:previewLayer];
+   */
+  UIButton* record = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 50)];
+  record.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height - 75);
+  [record setBackgroundColor:[UIColor greenColor]];
+  [record setTitle:@"录制" forState:UIControlStateNormal];
+  [record setTitle:@"取消录制" forState:UIControlStateSelected];
+  [record addTarget:self action:@selector(record:) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:record];
 }
 
 #pragma mark - ABSSessionDelegate
 
 - (void)record:(UIButton*)sender
 {
-    sender.selected = !sender.isSelected;
-    [sender setBackgroundColor: sender.isSelected ? [UIColor redColor] : [UIColor greenColor]];
+  sender.selected = !sender.isSelected;
+  [sender setBackgroundColor: sender.isSelected ? [UIColor redColor] : [UIColor greenColor]];
 
-    if (sender.isSelected) {
+  if (sender.isSelected) {
 //        encoder = new PushSDK::ffmpeg::H264Encode(640, 480, 30,1000000);
 //        [captureSession startRunning];
-        [self.session startVideoRecord];
-    }
-    else {
-        [self.session endVidoeRecord];
+    [self.session startVideoRecord];
+  }
+  else {
+    [self.session endVidoeRecord];
 //        [captureSession stopRunning];
 //        encoder->stopPushEncode();
-    }
+  }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+#ifdef kTestAudioMixer
+  @autoreleasepool {
+    NSString* path1 = [[NSBundle mainBundle] pathForResource:@"audio1.wav" ofType:nil];
+    NSString* path2 = [[NSBundle mainBundle] pathForResource:@"audio2.wav" ofType:nil];
+    NSString* path3 = [[NSBundle mainBundle] pathForResource:@"audio3.wav" ofType:nil];
+    NSString* path4 = [[NSBundle mainBundle] pathForResource:@"audio4.wav" ofType:nil];
+    NSString* outputPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:@"audio127.wav"];
+    
+    const char* input1 = [path1 cStringUsingEncoding:NSUTF8StringEncoding];
+    const char* input2 = [path2 cStringUsingEncoding:NSUTF8StringEncoding];
+    const char* input3 = [path3 cStringUsingEncoding:NSUTF8StringEncoding];
+    const char* input4 = [path4 cStringUsingEncoding:NSUTF8StringEncoding];
+    const char* output = [outputPath cStringUsingEncoding:NSUTF8StringEncoding];
+    
+    std::vector<std::string> inputs{std::string(input1), std::string(input2)};
+    
+    clock_t start_time = clock();
+    PushSDK::ffmpeg::audio_mixer mixer(inputs, output);
+    mixer.StartMixAudio();
+    clock_t end_time= clock();
+    std::cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS_PER_SEC*1000<<"ms"<< std::endl;//
+  }
+#endif
 }
 
 //- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
@@ -149,11 +182,11 @@
 
 - (void)didAddCamearSource:(ABSSimpleSession *)session
 {
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 
 }
 

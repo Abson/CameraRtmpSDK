@@ -17,7 +17,7 @@ namespace PushSDK {
         // kAudioMetadataSource
     };
 
-    typedef  MetaData<'soun ', int, int, int, int, int, int, bool, bool> AudioBufferMetadata;
+    typedef  MetaData<'soun ', double, int, int, int, int, int, bool, bool> AudioBufferMetadata;
 }
 
 #endif

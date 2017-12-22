@@ -23,7 +23,7 @@ namespace PushSDK { namespace Apple {
     public:
         MicSource(double sampleRate = 44100., int channelCount = 2, ExcludeAudioUnitCallback excludeAudioUnit = nullptr);
 
-        ~MicSource();
+       ~MicSource();
 
         void start();
 
@@ -33,7 +33,7 @@ namespace PushSDK { namespace Apple {
 
         const AudioUnit& audioUnit() const { return m_audioUnit; }
 
-        void inputCallback(uint8_t* data, size_t data_size, int inNumberFrames);
+        void inputCallback(uint8_t* data, size_t data_size, uint32_t inNumberFrames);
     private:
         double m_sampleRate;
         int m_channelCount;

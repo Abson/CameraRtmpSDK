@@ -19,10 +19,10 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "FFmpeg-iOS/include/libavformat/avformat.h"
-#include "FFmpeg-iOS/include/libavcodec/avcodec.h"
-#include "FFmpeg-iOS/include/libavutil/samplefmt.h"
-#include "FFmpeg-iOS/include/libswresample/swresample.h"
+#include "avformat.h"
+#include "avcodec.h"
+#include "samplefmt.h"
+#include "swresample.h"
 #ifdef __cplusplus
 }
 #endif
