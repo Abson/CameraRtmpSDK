@@ -13,7 +13,7 @@ hope it can help you.
 i did write a blog to introduce this project , hope it can help you to comprehend it.
 
 ### How to Use
-**If you want to test Vido (H.264), fllow this.**
+**If you want to test Vido (H.264编码)**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
@@ -30,7 +30,7 @@ self.session.delegate = self;
 [self.session endVidoeRecord];
 ```
 
-**if you want to test audio (AAC)**
+**if you want to test audio (AAC编码)**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:44100. channelCount:2];
@@ -41,8 +41,7 @@ self.session.delegate = self;
 [self.session endAudioRecord];
 ```
 
-**if you want to test amix of ffmpeg**
-fllow this
+**if you want to test amix（混音） of ffmpeg**
 ```
 NSString* path1 = [[NSBundle mainBundle] pathForResource:@"audio1.wav" ofType:nil];
 NSString* path2 = [[NSBundle mainBundle] pathForResource:@"audio2.wav" ofType:nil];
