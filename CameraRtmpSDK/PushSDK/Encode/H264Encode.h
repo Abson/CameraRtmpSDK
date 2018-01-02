@@ -30,7 +30,7 @@ extern "C" {
 }
 #endif
 
-namespace PushSDK { namespace ffmpeg {
+namespace push_sdk { namespace ffmpeg {
 
     typedef int32_t WORD;
 
@@ -41,18 +41,18 @@ namespace PushSDK { namespace ffmpeg {
       ~H264Encode();
 
     public:
-      void setOutput(std::shared_ptr<IOutput> output) {m_output = output;}
+      void setOutput(std::shared_ptr<IOutput> output) override {m_output = output;}
 
       // Input is expecting a CVPixelBufferRef
-      void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata);
+      void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata) override;
 
       void stop() override;
 
     public:
 
-      void setBitrate(int bitrate);
+      void setBitrate(int bitrate) override;
 
-      const int bitrate() const { return m_bitrate; }
+      const int bitrate() const override { return m_bitrate; }
 
     public:
 
@@ -80,11 +80,11 @@ namespace PushSDK { namespace ffmpeg {
       int m_framecnt;
 
     private:
-      AVFormatContext* m_fmt_ctx;
-      AVCodecContext* m_codec_ctx;
-      AVStream* m_video_st;
-      AVFrame* m_frame;
-      AVOutputFormat* m_out_fmt;
+      AVFormatContext* fmt_ctx_;
+      AVCodecContext* codec_ctx_;
+      AVStream* video_sem_;
+      AVFrame* frame_;
+      AVOutputFormat* output_fmt_;
       AVCodec* m_codec;
       AVPacket m_pkt;
 

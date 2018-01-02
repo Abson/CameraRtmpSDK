@@ -4,7 +4,7 @@
 
 #include "IMetaData.hpp"
 
-namespace PushSDK {
+namespace push_sdk {
     enum  {
         kAudioMetadaFrequencyInHz,
         kAudioMetadaBitsPerChannel,

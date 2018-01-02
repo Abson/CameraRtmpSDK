@@ -28,7 +28,7 @@ extern "C" {
 #endif
 
 
-namespace PushSDK {namespace ffmpeg {
+namespace push_sdk {namespace ffmpeg {
 
     class audio_mixer {
     public:

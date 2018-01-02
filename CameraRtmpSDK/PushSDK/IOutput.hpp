@@ -12,7 +12,7 @@
 #include <chrono>
 #include "IMetaData.hpp"
 
-namespace PushSDK {
+namespace push_sdk {
 
     class IOutput
     {

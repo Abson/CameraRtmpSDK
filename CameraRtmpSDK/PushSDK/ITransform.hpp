@@ -11,7 +11,7 @@
 
 #include "IOutput.hpp"
 
-namespace PushSDK {
+namespace push_sdk {
 
     class ITransform: public IOutput
     {

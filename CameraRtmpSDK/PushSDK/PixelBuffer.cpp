@@ -9,7 +9,7 @@
 #include "PixelBuffer.hpp"
 
 
-namespace PushSDK { namespace Apple {
+namespace push_sdk { namespace Apple {
 
     PixelBuffer:: PixelBuffer(CVPixelBufferRef pb, bool temporary)
     :m_state(kVCPixelBufferStateAvailable),

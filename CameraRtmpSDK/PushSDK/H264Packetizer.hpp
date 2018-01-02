@@ -13,7 +13,7 @@
 #include "ITransform.hpp"
 #include <vector>
 
-namespace PushSDK { namespace rtmp {
+namespace push_sdk { namespace rtmp {
 
     class H264Packetizer : public ITransform
     {

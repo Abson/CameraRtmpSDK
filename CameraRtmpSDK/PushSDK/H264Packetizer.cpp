@@ -9,7 +9,7 @@
 #include "H264Packetizer.hpp"
 
 
-namespace PushSDK { namespace rtmp {
+namespace push_sdk { namespace rtmp {
 
     H264Packetizer::H264Packetizer(int ctsOffset)
     :m_videoTs(0),

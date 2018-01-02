@@ -21,7 +21,7 @@ extern "C" {
 }
 #endif
 
-namespace PushSDK {namespace ffmpeg {
+namespace push_sdk {namespace ffmpeg {
 
     typedef struct OutputStream {
       AVStream *st;

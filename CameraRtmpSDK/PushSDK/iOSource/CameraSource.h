@@ -13,7 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "IOutput.hpp"
 
-namespace PushSDK {  namespace Apple {
+namespace push_sdk {  namespace Apple {
 	class CameraSource
 	{
 	public:

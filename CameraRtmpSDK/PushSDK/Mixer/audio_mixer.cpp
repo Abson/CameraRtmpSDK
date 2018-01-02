@@ -4,17 +4,15 @@
 //
 
 #include "audio_mixer.h"
+#include "code_run_time.h"
+#include "utility.h"
 
-namespace PushSDK {namespace ffmpeg {
+namespace push_sdk {namespace ffmpeg {
+
+    static evaluate::code_run_time run_timer;
+    static std::vector<long> run_times;
 
     uint64_t OUTPUT_CHANNELS = 1;
-
-    static char *const get_error_text(const int error)
-    {
-      static char error_buffer[255];
-      av_strerror(error, error_buffer, sizeof(error_buffer));
-      return error_buffer;
-    }
 
     audio_mixer::audio_mixer(std::vector<std::string>& inputs,
         const std::string &output) : sink_(nullptr),
@@ -57,6 +55,7 @@ namespace PushSDK {namespace ffmpeg {
       err = OpenOutputFile(output, input_codec_ctx0, &output_codec_ctx_, &output_fmt_ctx_);
       printf("open output file err : %d\n", err);
       av_dump_format(output_fmt_ctx_, 0, output.c_str(), 1);
+      printf("open output file err : %d\n", err);
     }
 
     void audio_mixer::StartMixAudio() {
@@ -74,6 +73,8 @@ namespace PushSDK {namespace ffmpeg {
       }
 
       printf("FINISHED\n");
+      printf("amix per frame average time = %f μs\n", evaluate::AverageCodeRuntime(run_times) / 1000.f);
+      run_times.erase(run_times.begin(), run_times.end());
     }
 
     int
@@ -88,7 +89,7 @@ namespace PushSDK {namespace ffmpeg {
       // 打开输入文件并读取它
       if ((err = avformat_open_input(input_fmt_ctx, fname.c_str(), nullptr, nullptr)) < 0) {
         av_log(nullptr, AV_LOG_ERROR, "Could not open input file '%s' (error '%s')\n",
-            fname.c_str(), get_error_text(err));
+            fname.c_str(), utility::get_error_text(err));
         *input_fmt_ctx = nullptr;
         return err;
       }
@@ -96,7 +97,7 @@ namespace PushSDK {namespace ffmpeg {
       // 获取流的信息
       if ((err = avformat_find_stream_info((*input_fmt_ctx), nullptr)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not open find stream info (error '%s')\n",
-            get_error_text(err));
+            utility::get_error_text(err));
         avformat_close_input(input_fmt_ctx);
         return err;
       }
@@ -119,7 +120,7 @@ namespace PushSDK {namespace ffmpeg {
       // 为音频流打开解码器，在后面会使用到这解码器
       if ((err = avcodec_open2((*input_fmt_ctx)->streams[0]->codec, input_codec, nullptr)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not open input codec (error '%s')\n",
-            get_error_text(err));
+            utility::get_error_text(err));
         avformat_close_input(input_fmt_ctx);
         return err;
       }
@@ -265,7 +266,7 @@ namespace PushSDK {namespace ffmpeg {
       // Configure the graph
       err = avfilter_graph_config(filter_graph, nullptr);
       if (err < 0) {
-        av_log(NULL, AV_LOG_ERROR, "Error while configuring graph : %s\n", get_error_text(err));
+        av_log(NULL, AV_LOG_ERROR, "Error while configuring graph : %s\n", utility::get_error_text(err));
         return err;
       }
 
@@ -301,7 +302,7 @@ input --> split ---------------------> overlay --> output
       /*Open the output file write to it*/
       if ((error = avio_open(&output_io_ctx, fname.c_str(), AVIO_FLAG_WRITE)) < 0) {
         av_log(nullptr, AV_LOG_ERROR, "Could not open output file '%s' (error '%s')\n",
-            fname.c_str(), get_error_text(error));
+            fname.c_str(), utility::get_error_text(error));
         return error;
       }
 
@@ -356,7 +357,7 @@ input --> split ---------------------> overlay --> output
       /* Open the encoder for the audio stream to use it later. */
       if ((error = avcodec_open2((*output_codec_ctx), output_codec, nullptr)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not open output codec (error '%s')\n",
-            get_error_text(error));
+            utility::get_error_text(error));
         goto cleanup;
       }
 
@@ -403,7 +404,7 @@ input --> split ---------------------> overlay --> output
       int nb_finished = 0;
 
       while (nb_finished < nb_inputs) {
-        int data_present_in_graph = 0;
+        int data_present_in_graph = 0; // 表示是否有数据在过滤器中
 
         for(int i = 0 ; i < nb_inputs ; i++){
           if(input_finished[i] || input_to_read[i] == 0){
@@ -440,13 +441,19 @@ input --> split ---------------------> overlay --> output
               goto end;
             }
           }
-          else if (data_present) { /** If there is decoded data, convert and store it */
+          else if (data_present) {
+            // add run time test
+            run_timer.StartClock();
+
+            /* If there is decoded data, convert and store it */
             /* push the audio data from decoded frame into the filtergraph */
             ret = av_buffersrc_write_frame(buffer_ctxs[i], frame);
             if (ret < 0) {
               av_log(NULL, AV_LOG_ERROR, "Error while feeding the audio filtergraph\n");
               goto end;
             }
+
+            run_timer.EndClock();
 
             av_log(NULL, AV_LOG_INFO, "add %d samples on input %d (%d Hz, time=%f, ttime=%f)\n",
                 frame->nb_samples, i, input_codec_ctxs[i]->sample_rate,
@@ -465,7 +472,10 @@ input --> split ---------------------> overlay --> output
 
           /* pull filtered audio from the filtergraph */
           while (1) {
+            run_timer.StartClock();
             ret = av_buffersink_get_frame(sink_, filt_frame);
+
+            run_timer.EndClock();
             if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF){
               for(int i = 0 ; i < nb_inputs ; i++){
                 if(av_buffersrc_get_nb_failed_requests(buffer_ctxs[i]) > 0){
@@ -479,10 +489,15 @@ input --> split ---------------------> overlay --> output
             if (ret < 0)
               goto end;
 
+            long time_ret = run_timer.Result();
+            run_times.push_back(time_ret);
+
             av_log(NULL, AV_LOG_INFO, "remove %d samples from sink (%d Hz, time=%f, ttime=%f)\n",
                 filt_frame->nb_samples, output_codec_ctx_->sample_rate,
                 (double)filt_frame->nb_samples / output_codec_ctx_->sample_rate,
                 (double)(total_out_samples += filt_frame->nb_samples) / output_codec_ctx_->sample_rate);
+
+            av_log(nullptr, AV_LOG_INFO, "amix one frame：samples: %d, time: %f μs\n",filt_frame->nb_samples, time_ret/1000.f);
 
             //av_log(NULL, AV_LOG_INFO, "Data read from graph\n");
             ret = EncodeAudioFrame(filt_frame, output_fmt_ctx_, output_codec_ctx_, &data_present);
@@ -518,7 +533,7 @@ input --> split ---------------------> overlay --> output
       int error;
       if ((error = avformat_write_header(output_fmt_ctx, nullptr)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not write output file header (error '%s')\n",
-            get_error_text(error));
+            utility::get_error_text(error));
         return error;
       }
       return 0;
@@ -529,7 +544,7 @@ input --> split ---------------------> overlay --> output
       int error;
       if ((error = av_write_trailer(output_fmt_ctx)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not write output file header (error '%s')\n",
-            get_error_text(error));
+            utility::get_error_text(error));
         return error;
       }
       return 0;
@@ -575,7 +590,7 @@ input --> split ---------------------> overlay --> output
           *finished = 1;
         else {
           av_log(NULL, AV_LOG_ERROR, "Could not read frame (error '%s')\n",
-              get_error_text(error));
+              utility::get_error_text(error));
           return error;
         }
       }
@@ -589,7 +604,7 @@ input --> split ---------------------> overlay --> output
       if ((error = avcodec_decode_audio4(input_codec_ctx, frame,
           data_present, &input_packet)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not decode frame (error '%s')\n",
-            get_error_text(error));
+            utility::get_error_text(error));
         av_packet_unref(&input_packet);
         return error;
       }
@@ -622,7 +637,7 @@ input --> split ---------------------> overlay --> output
       if ((error = avcodec_encode_audio2(output_codec_ctx, &output_packet,
           frame, data_present)) < 0) {
         av_log(NULL, AV_LOG_ERROR, "Could not encode frame (error '%s')\n",
-            get_error_text(error));
+            utility::get_error_text(error));
         av_packet_unref(&output_packet);
         return error;
       }
@@ -631,7 +646,7 @@ input --> split ---------------------> overlay --> output
       if (*data_present) {
         if ((error = av_write_frame(output_fmt_ctx, &output_packet)) < 0) {
           av_log(NULL, AV_LOG_ERROR, "Could not write frame (error '%s')\n",
-              get_error_text(error));
+              utility::get_error_text(error));
           av_packet_unref(&output_packet);
           return error;
         }

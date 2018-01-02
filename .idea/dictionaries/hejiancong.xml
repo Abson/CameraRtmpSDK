@@ -5,9 +5,12 @@
       <w>abuffersink</w>
       <w>camerartmpsdk</w>
       <w>ctxs</w>
+      <w>encodec</w>
       <w>filtergraph</w>
       <w>muxer</w>
+      <w>samplerate</w>
       <w>scrs</w>
+      <w>tincr</w>
     </words>
   </dictionary>
 </component>

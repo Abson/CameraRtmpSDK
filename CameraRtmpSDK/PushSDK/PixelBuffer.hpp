@@ -13,7 +13,7 @@
 #include <CoreMedia/CoreMedia.h>
 #include <memory>
 
-namespace PushSDK { namespace Apple {
+namespace push_sdk { namespace Apple {
 
     class PixelBuffer : public IPixleBuffer
     {

@@ -12,7 +12,7 @@
 // 一般情况下ADTS的头信息都是7个字节，分为2部分：
 // adts_fixed_header();
 // adts_variable_header();
-namespace PushSDK { namespace ffmpeg {
+namespace push_sdk { namespace ffmpeg {
 
     static std::array<std::string, 4> profile_array{"Main", "LC", "SSR", "unknown"};
     static std::array<std::string, 13> sampling_frequency_array{"96000Hz", "88200Hz", "64000Hz", "48000Hz", "44100Hz", "32000Hz", "24000Hz", "22050Hz", "16000Hz", "12000Hz", "11025Hz", "8000Hz", "unknown"};

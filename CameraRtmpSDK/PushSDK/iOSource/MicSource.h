@@ -1,4 +1,9 @@
 //
+// Created by 何剑聪 on 2017/12/28.
+// Copyright (c) 2017 Abson. All rights reserved.
+//
+
+//
 //  MicSource.h
 //  CameraRtmpSDK
 //
@@ -14,40 +19,43 @@
 #define __Apple_MicSource__h
 
 @class InterruptionHandler;
-namespace PushSDK { namespace Apple {
+namespace push_sdk { namespace Apple {
 
     class MicSource : std::enable_shared_from_this<MicSource> {
 
-        using ExcludeAudioUnitCallback = std::function< void (AudioUnit&)>;
+      using ExcludeAudioUnitCallback = std::function< void (AudioUnit&)>;
 
     public:
-        MicSource(double sampleRate = 44100., int channelCount = 2, ExcludeAudioUnitCallback excludeAudioUnit = nullptr);
+      MicSource(double sampleRate = 44100., int channelCount = 2, ExcludeAudioUnitCallback excludeAudioUnit = nullptr);
 
-       ~MicSource();
+      ~MicSource();
 
-        void start();
+      void start();
 
-        void stop();
+      void stop();
 
-        void setOutput(std::shared_ptr<IOutput> output);
+      void setOutput(std::shared_ptr<IOutput> output);
 
-        const AudioUnit& audioUnit() const { return m_audioUnit; }
+      const AudioUnit& audioUnit() const { return audio_unit_; }
 
-        void inputCallback(uint8_t* data, size_t data_size, uint32_t inNumberFrames);
+      void inputCallback(uint8_t* data, size_t data_size, uint32_t inNumberFrames);
     private:
-        double m_sampleRate;
-        int m_channelCount;
+      double m_sampleRate;
+      int m_channelCount;
 
-        InterruptionHandler* m_interruptionHandler;
+      InterruptionHandler* m_interruptionHandler;
 
-        AudioComponent m_component;
-        AudioComponentInstance m_audioUnit;
+      AudioComponent m_component;
+      AudioUnit audio_unit_;
 
-        ExcludeAudioUnitCallback m_excludeAudioUnit;
+      ExcludeAudioUnitCallback m_excludeAudioUnit;
 
-        std::weak_ptr<IOutput> m_output;
+      std::weak_ptr<IOutput> m_output;
+
+
+      void WritePCMFileTest(uint8_t *data, size_t data_size, int time);
     };
-}
+  }
 }
 
 

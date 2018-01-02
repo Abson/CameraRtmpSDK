@@ -10,14 +10,14 @@
 
 @interface CaptureCallbackSession : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate>
 {
-  PushSDK::Apple::CameraSource* m_source;
+  push_sdk::Apple::CameraSource* m_source;
 }
 
 @end
 
 @implementation CaptureCallbackSession
 
-- (void)setSource:(PushSDK::Apple::CameraSource*)source
+- (void)setSource:(push_sdk::Apple::CameraSource*)source
 {
   m_source = source;
 }
@@ -35,7 +35,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 @end
 
 
-namespace PushSDK {  namespace Apple {
+namespace push_sdk {  namespace Apple {
 
     CameraSource::CameraSource() :
         m_captureSession(nullptr),
@@ -153,7 +153,7 @@ namespace PushSDK {  namespace Apple {
     }
 
     void
-    CameraSource::setOutput(PushSDK::IOutput *output)
+    CameraSource::setOutput(push_sdk::IOutput *output)
     {
       m_output = output;
     }

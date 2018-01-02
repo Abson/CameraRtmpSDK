@@ -11,7 +11,7 @@
 
 #include "ITransform.hpp"
 
-namespace PushSDK {
+namespace push_sdk {
 
     class IEncoder : public ITransform
     {

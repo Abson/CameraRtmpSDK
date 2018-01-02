@@ -27,7 +27,7 @@ extern "C" {
 }
 #endif
 
-namespace PushSDK { namespace ffmpeg {
+namespace push_sdk { namespace ffmpeg {
 
     class AACEncoder : public IEncoder {
         
@@ -59,15 +59,15 @@ namespace PushSDK { namespace ffmpeg {
 
         int m_birerate;
 
-        AVCodec* m_codec;
-        AVCodecContext* m_ctx;
-        AVFrame* m_frame;
-        AVFrame* m_converFrame;
-        AVPacket m_pkt;
-        SwrContext* m_swrCtx;
+        AVCodec* codec_;
+        AVCodecContext* code_ctx_;
+        AVFrame* frame_;
+        AVFrame* conver_frame_;
+        AVPacket pkt_;
+        SwrContext* swr_ctx_;
 
-        uint8_t* m_samples;
-        uint8_t** m_convertData;
+        uint8_t* samples_;
+        uint8_t** convert_data_;
 
         int m_framecnt;
 

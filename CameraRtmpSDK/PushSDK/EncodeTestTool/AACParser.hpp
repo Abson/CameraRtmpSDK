@@ -45,7 +45,7 @@
  8-15: Reserved
  */
 
-namespace PushSDK { namespace ffmpeg {
+namespace push_sdk { namespace ffmpeg {
 
     static const int ADTS_HEADER_SIZE = 56; // bits
     static const int ADTS_FIXED_HEADER_SIZE = 28; // bits

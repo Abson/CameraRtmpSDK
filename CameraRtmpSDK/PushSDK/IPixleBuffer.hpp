@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-namespace PushSDK {
+namespace push_sdk {
 
     enum {
         kVCPixelBufferFormat32BGRA = 'bgra',

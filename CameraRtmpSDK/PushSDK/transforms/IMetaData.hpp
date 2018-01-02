@@ -12,9 +12,7 @@
 #include <iostream>
 
 struct IMetadata
-{
-
-};
+{};
 
 template <int32_t MetaDataType, typename... Types>
 struct MetaData : IMetadata {
@@ -52,7 +50,7 @@ private:
     std::tuple<Types...> m_data;
 };
 
-namespace PushSDK {
+namespace push_sdk {
 
 }
 

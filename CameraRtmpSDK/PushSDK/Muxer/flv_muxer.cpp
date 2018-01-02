@@ -8,7 +8,7 @@
 
 #define STREAM_FRAME_RATE 25 /* 25 images/s */
 
-namespace PushSDK {
+namespace push_sdk {
 
   ffmpeg::flv_muxer::flv_muxer(const std::string &input_fname, const std::string &output_fname) {
 
@@ -61,7 +61,7 @@ namespace PushSDK {
 
   void
   ffmpeg::flv_muxer::add_stream(
-      PushSDK::ffmpeg::OutputStream *ost,
+      push_sdk::ffmpeg::OutputStream *ost,
       AVFormatContext *oc,
       AVCodec **codec,
       AVCodecID codec_id) {

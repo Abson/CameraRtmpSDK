@@ -12,14 +12,16 @@
 #import "H264Encode.h"
 #import "MicSource.h"
 #include "AACEncoder.hpp"
+#import "opus_encoder.h"
 
 @interface ABSSimpleSession()
 {
   dispatch_queue_t _graphManageQueue;
-  PushSDK::Apple::CameraSource* m_cameraSource;
-  PushSDK::Apple::MicSource* m_micSource;
-  PushSDK::ffmpeg::H264Encode* m_h264Encoder;
-  std::shared_ptr<PushSDK::ffmpeg::AACEncoder> m_aacEncoder;
+  push_sdk::Apple::CameraSource* cameraSource_;
+  push_sdk::Apple::MicSource* micSource_;
+  push_sdk::ffmpeg::H264Encode* h264Encoder_;
+  std::shared_ptr<push_sdk::ffmpeg::AACEncoder> aacEncoder_;
+  std::shared_ptr<push_sdk::ffmpeg::OpusEncoder> opusEncoder_;
 }
 @property (nonatomic, assign) int bitrate;
 @property (nonatomic, assign) CGSize videoSize;
@@ -38,9 +40,9 @@
   [self endVidoeRecord];
   [self endAudioRecord];
 
-  Cplus_Release(m_cameraSource);
-  Cplus_Release(m_h264Encoder);
-  Cplus_Release(m_micSource);
+  Cplus_Release(cameraSource_);
+  Cplus_Release(h264Encoder_);
+  Cplus_Release(micSource_);
 }
 
 - (instancetype)init
@@ -94,46 +96,69 @@
 
 - (void)setupGraph
 {
-  m_cameraSource = new PushSDK::Apple::CameraSource();
-  m_cameraSource->setupCamera(self.fps, (_cameraState == ABSCameraStateFront), true, AVCaptureSessionPreset640x480);
-  CALayer* previeLayer = m_cameraSource->captureVideoPreviewLayer();
+  cameraSource_ = new push_sdk::Apple::CameraSource();
+  cameraSource_->setupCamera(self.fps, (_cameraState == ABSCameraStateFront), true, AVCaptureSessionPreset640x480);
+  CALayer* previeLayer = cameraSource_->captureVideoPreviewLayer();
   previeLayer.frame = self.previewView.bounds;
   [self.previewView.layer addSublayer:previeLayer];
 }
 
 - (void)setUpMicSource
 {
-  m_micSource = new PushSDK::Apple::MicSource(self.audioSampleRate, self.audioChannelCount);
+  micSource_ = new push_sdk::Apple::MicSource(self.audioSampleRate, self.audioChannelCount);
 }
 
 
 - (void)startVideoRecord
 {
-  m_h264Encoder = new PushSDK::ffmpeg::H264Encode(static_cast<int>(self.videoSize.width), static_cast<int>(self.videoSize.height), self.fps, self.bitrate);
-  m_cameraSource->setOutput(m_h264Encoder);
-  m_cameraSource->startRecord();
+  h264Encoder_ = new push_sdk::ffmpeg::H264Encode(static_cast<unsigned int>(self.videoSize.width),
+      static_cast<unsigned int>(self.videoSize.height), self.fps, self.bitrate);
+  cameraSource_->setOutput(h264Encoder_);
+  cameraSource_->startRecord();
 }
 
 - (void)startAudioRecord
 {
+  NSString* filePath = [self randomOpusPath];
+
+  const char* file_path = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
+  opusEncoder_ = std::make_shared<push_sdk::ffmpeg::OpusEncoder>(self.audioSampleRate, self.audioChannelCount, 96000, file_path);
+  micSource_->setOutput(opusEncoder_);
+  micSource_->start();
+}
+
+- (NSString *)randomAACPath {
+
   NSString *date = nil;
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   formatter.dateFormat = @"YYYY-MM-dd hh:mm:ss";
   date = [formatter stringFromDate:[NSDate date]];
-  NSString* file_path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.aac", date]];
-  m_aacEncoder = std::shared_ptr<PushSDK::ffmpeg::AACEncoder>(new PushSDK::ffmpeg::AACEncoder((int) self.audioSampleRate, self.audioChannelCount, 96000, [file_path cStringUsingEncoding:NSUTF8StringEncoding]));
-  m_micSource->setOutput(m_aacEncoder);
-  m_micSource->start();
+  NSString* file_path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:
+      [NSString stringWithFormat:@"%@.aac", date]];
+
+  return file_path;
+}
+
+- (NSString *)randomOpusPath {
+
+  NSString *date = nil;
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  formatter.dateFormat = @"YYYY-MM-dd hh:mm:ss";
+  date = [formatter stringFromDate:[NSDate date]];
+  NSString* file_path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:
+      [NSString stringWithFormat:@"%@.opus", date]];
+
+  return file_path;
 }
 
 - (void)endAudioRecord
 {
-  m_micSource->stop();
+  micSource_->stop();
 }
 
 - (void)endVidoeRecord
 {
-  m_cameraSource->stopRecord();
+  cameraSource_->stopRecord();
 }
 
 
