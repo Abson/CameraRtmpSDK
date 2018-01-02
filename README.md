@@ -30,7 +30,7 @@ self.session.delegate = self;
 [self.session endVidoeRecord];
 ```
 
-**if you want to test audio (AAC编码)**
+**if you want to test audio for AAC (AAC编码)**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:44100. channelCount:2];
@@ -40,6 +40,22 @@ self.session.delegate = self;
 // close it 
 [self.session endAudioRecord];
 ```
+**if you want to test audio for Opus (Opus编码)**
+```
+file ABSSimpleSession.m
+modify the method of the file for ABSSimpleSession
+
+- (void)startAudioRecord
+{
+  NSString* filePath = [self randomOpusPath];
+
+  const char* file_path = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
+  opusEncoder_ = std::make_shared<push_sdk::ffmpeg::OpusEncoder>(self.audioSampleRate, self.audioChannelCount, 96000, file_path);
+  micSource_->setOutput(opusEncoder_);
+  micSource_->start();
+}
+```
+
 
 **if you want to test amix（混音） of ffmpeg**
 ```
@@ -62,3 +78,7 @@ std::cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS
 
 ### Update
 2017.11.1 Update project to runnable and and modify test API, enjoy it
+2018.1.2 fix audio encode bug, make it encode correctly，enjoy it
+
+### feature
+As far as this moment, This project looks very confusing，i will take more time make it more usable. hope you can supports me, leaving you stars, Thanks.
