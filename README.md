@@ -1,6 +1,6 @@
 ### A iOS project be used for recording video stream in real time
 
-this project was created base in ffmpeg. By sampling and resampling the video stream, we encode the video/audio stream to H.264/AAC.
+This project was created base in ffmpeg, which code with c++ as far as possible. By sampling and resampling the video stream, we encode the video/audio stream to H.264/AAC.
 And also, we create H.264/AAC parser to help us understand that structure.
 hope it can help you.
 
@@ -13,7 +13,7 @@ hope it can help you.
 i did write a blog to introduce this project , hope it can help you to comprehend it.
 
 ### How to Use
-**If you want to test Vido (H.264), fllow this.**
+**If you want to test Vido (H.264编码)**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithVideoSize:CGSizeMake(640, 480)
@@ -30,7 +30,7 @@ self.session.delegate = self;
 [self.session endVidoeRecord];
 ```
 
-**if you want to test audio (AAC)**
+**if you want to test audio for AAC (AAC编码)**
 
 ```object-c
 self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:44100. channelCount:2];
@@ -40,9 +40,24 @@ self.session.delegate = self;
 // close it 
 [self.session endAudioRecord];
 ```
+**if you want to test audio for Opus (Opus编码)**
+```
+file ABSSimpleSession.m
+modify the method of the file for ABSSimpleSession
 
-**if you want to test amix of ffmpeg**
-fllow this
+- (void)startAudioRecord
+{
+  NSString* filePath = [self randomOpusPath];
+
+  const char* file_path = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
+  opusEncoder_ = std::make_shared<push_sdk::ffmpeg::OpusEncoder>(self.audioSampleRate, self.audioChannelCount, 96000, file_path);
+  micSource_->setOutput(opusEncoder_);
+  micSource_->start();
+}
+```
+
+
+**if you want to test amix（混音） of ffmpeg**
 ```
 NSString* path1 = [[NSBundle mainBundle] pathForResource:@"audio1.wav" ofType:nil];
 NSString* path2 = [[NSBundle mainBundle] pathForResource:@"audio2.wav" ofType:nil];
@@ -62,4 +77,9 @@ std::cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS
 ```
 
 ### Update
-2017.11.1 Update project to runnable and and modify test API, enjoy it
+2017.11.1 Update project to runnable and and modify test API, enjoy it.
+
+2018.1.2 fix audio encode bug, make it encode correctly，enjoy it.
+
+### feature
+As far as this moment, This project looks very confusing，i will take more time make it more usable. hope you can supports me, leaving you stars, Thanks.
