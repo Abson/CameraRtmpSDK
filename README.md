@@ -79,5 +79,5 @@ mixer.StartMixAudio();
 
 2018.1.2 fix audio encode bug, make it encode correctly，enjoy it.
 
-### feature
+### Feature
 As far as this moment, This project looks very confusing，i will take more time make it more usable. hope you can supports me, leaving you stars, Thanks.
