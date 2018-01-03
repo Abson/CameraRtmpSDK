@@ -61,7 +61,8 @@ modify the method of the file for ABSSimpleSession
 ```
 NSString* path1 = [[NSBundle mainBundle] pathForResource:@"audio1.wav" ofType:nil];
 NSString* path2 = [[NSBundle mainBundle] pathForResource:@"audio2.wav" ofType:nil];
-NSString* outputPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:@"audio127.wav"];
+NSString* outputPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject 
+stringByAppendingPathComponent:@"audio127.wav"];
 
 const char* input1 = [path1 cStringUsingEncoding:NSUTF8StringEncoding];
 const char* input2 = [path2 cStringUsingEncoding:NSUTF8StringEncoding];
