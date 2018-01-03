@@ -23,7 +23,7 @@
   std::shared_ptr<push_sdk::ffmpeg::AACEncoder> aacEncoder_;
   std::shared_ptr<push_sdk::ffmpeg::OpusEncoder> opusEncoder_;
 }
-@property (nonatomic, assign) int bitrate;
+@property (nonatomic, assign) int videoBiteRate;
 @property (nonatomic, assign) CGSize videoSize;
 @property (nonatomic, assign) int fps;
 @property (nonatomic, assign) BOOL useInterfaceOrientation;
@@ -32,6 +32,8 @@
 @property (nonatomic, weak) UIView* preview;
 @property (nonatomic, assign) float audioSampleRate;
 @property (nonatomic, assign) int audioChannelCount;
+@property (nonatomic, assign) int audioBiteRate;
+@property (nonatomic, assign) ABSEncodeType audioEncodeType;
 @end
 
 @implementation ABSSimpleSession
@@ -65,7 +67,7 @@
 
     self.videoSize = videoSize;
     self.fps = fps;
-    self.bitrate = bps;
+    self.videoBiteRate = bps;
     self.useInterfaceOrientation = useInterfaceOrientation;
     self.cameraState = cameraState;
 
@@ -83,12 +85,15 @@
 
 
 - (instancetype)initWithAudioSampleRate:(float)rate
-                           channelCount:(int)count;
+                                bitRate:(int)biteRate
+                           channelCount:(int)count
+                                 encode:(ABSEncodeType)type;
 {
   if (self = [super init]) {
     self.audioSampleRate = rate > 0 ? rate : (float) 44100.; // 最多只能用 44KHZ，因为 flv 格式不支持 44KHZ 以上。
     self.audioChannelCount = count > 0 ? count : 2;
-
+    self.audioBiteRate = biteRate;
+    self.audioEncodeType = type;
     [self setUpMicSource];
   }
   return self;
@@ -112,17 +117,41 @@
 - (void)startVideoRecord
 {
   h264Encoder_ = new push_sdk::ffmpeg::H264Encode(static_cast<unsigned int>(self.videoSize.width),
-      static_cast<unsigned int>(self.videoSize.height), self.fps, self.bitrate);
+      static_cast<unsigned int>(self.videoSize.height), self.fps, self.videoBiteRate);
   cameraSource_->setOutput(h264Encoder_);
   cameraSource_->startRecord();
 }
 
 - (void)startAudioRecord
 {
+  if ( ABSEncodeTypeAAC == self.audioEncodeType) {
+
+    [self setUpAACEncoder];
+  }
+  else if (ABSEncodeTypeOpus == self.audioEncodeType) {
+
+    [self setUpOpusEncoder];
+  }
+}
+
+- (void)setUpAACEncoder {
+
+  NSString* filePath = [self randomAACPath];
+
+  const char* file_path = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
+  aacEncoder_ = std::make_shared<push_sdk::ffmpeg::AACEncoder>(self.audioSampleRate, self.audioChannelCount,
+      self.audioBiteRate, file_path);
+  micSource_->setOutput(aacEncoder_);
+  micSource_->start();
+}
+
+- (void)setUpOpusEncoder {
+
   NSString* filePath = [self randomOpusPath];
 
   const char* file_path = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
-  opusEncoder_ = std::make_shared<push_sdk::ffmpeg::OpusEncoder>(self.audioSampleRate, self.audioChannelCount, 96000, file_path);
+  opusEncoder_ = std::make_shared<push_sdk::ffmpeg::OpusEncoder>(self.audioSampleRate, self.audioChannelCount,
+      self.audioBiteRate, file_path);
   micSource_->setOutput(opusEncoder_);
   micSource_->start();
 }

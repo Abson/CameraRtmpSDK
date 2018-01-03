@@ -14,6 +14,11 @@ typedef NS_ENUM(NSInteger, ABSCameraState) {
     ABSCameraStateBack
 };
 
+typedef NS_ENUM(NSInteger, ABSEncodeType) {
+  ABSEncodeTypeOpus,
+  ABSEncodeTypeAAC,
+};
+
 @class ABSSimpleSession;
 @protocol ABSSessionDelegate <NSObject>
 
@@ -56,7 +61,9 @@ typedef NS_ENUM(NSInteger, ABSCameraState) {
  @return
  */
 - (instancetype)initWithAudioSampleRate:(float)rate
-                           channelCount:(int)count;
+                                bitRate:(int)biteRate
+                           channelCount:(int)count
+                                 encode:(ABSEncodeType)type;
 
 - (void)startVideoRecord;
 

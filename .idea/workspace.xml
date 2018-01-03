@@ -2,177 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1403f2b0-3859-45b9-890c-077d09f6b34a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/tdjm.pcm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Evaluate/code_run_time.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Evaluate/code_run_time.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/hash.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/mathematics.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/mem.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/murmur3.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/rational.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libavdevice.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libavfilter.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libavformat.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libavutil.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libpostproc.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libswresample.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libswscale.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/libopus-iOS/include/opus.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/libopus-iOS/include/opus_defines.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/libopus-iOS/include/opus_multistream.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/libopus-iOS/include/opus_types.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/libopus-iOS/lib/libopus.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/x264-iOS/include/x264.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/x264-iOS/include/x264_config.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/x264-iOS/lib/libx264.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/utility.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/utility.h" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/hejiancong.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hejiancong.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CameraRtmpSDK.xcodeproj/project.pbxproj" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK.xcodeproj/project.xcworkspace/xcuserdata/hejiancong.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/CameraRtmpSDK.xcodeproj/project.xcworkspace/xcuserdata/hejiancong.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h" />
       <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/EncodeTestTool/AACParser.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/EncodeTestTool/AACParser.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/EncodeTestTool/AACParser.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/EncodeTestTool/AACParser.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/EncodeTestTool/H264Parser.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/EncodeTestTool/H264Parser.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avcodec.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/avcodec.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avdct.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/avdct.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avfft.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/avfft.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/d3d11va.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/d3d11va.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/dirac.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/dirac.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/dv_profile.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/dv_profile.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/dxva2.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/dxva2.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/qsv.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/qsv.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/vaapi.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/vaapi.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/vda.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/vda.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/vdpau.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/vdpau.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/videotoolbox.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/videotoolbox.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/vorbis_parser.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/vorbis_parser.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/xvmc.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/xvmc.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavdevice/avdevice.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavdevice/avdevice.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavdevice/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavdevice/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavfilter/avfilter.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavfilter/avfilter.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavfilter/avfiltergraph.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavfilter/avfiltergraph.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavfilter/buffersink.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavfilter/buffersink.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavfilter/buffersrc.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavfilter/buffersrc.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavfilter/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavfilter/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavformat/avformat.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/avformat.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavformat/avio.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/avio.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavformat/url.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavformat/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/adler32.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/adler32.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/aes.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/aes.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/aes_ctr.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/aes_ctr.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/attributes.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/attributes.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/audio_fifo.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/audio_fifo.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avassert.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/avassert.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avconfig.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/avconfig.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avstring.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/avstring.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/avutil.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/avutil.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/base64.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/base64.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/blowfish.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/blowfish.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/bprint.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/bprint.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/bswap.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/bswap.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/buffer.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/buffer.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/camellia.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/camellia.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/cast5.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/cast5.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/channel_layout.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/channel_layout.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/common.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/common.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/cpu.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/cpu.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/crc.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/crc.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/des.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/des.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/dict.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/dict.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/display.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/display.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/downmix_info.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/downmix_info.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/error.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/error.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/eval.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/eval.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/ffversion.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/ffversion.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/fifo.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/fifo.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/file.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/file.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/frame.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/frame.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/hash.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/hmac.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/hmac.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/imgutils.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/imgutils.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/intfloat.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/intfloat.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/intreadwrite.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/intreadwrite.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/lfg.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/lfg.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/log.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/log.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/lzo.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/lzo.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/macros.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/macros.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/mastering_display_metadata.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/mastering_display_metadata.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/mathematics.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/md5.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/md5.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/mem.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/motion_vector.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/motion_vector.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/murmur3.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/opt.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/opt.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/parseutils.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/parseutils.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/pixdesc.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/pixdesc.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/pixelutils.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/pixelutils.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/pixfmt.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/pixfmt.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/random_seed.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/random_seed.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/rational.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/rc4.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/rc4.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/replaygain.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/replaygain.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/ripemd.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/ripemd.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/samplefmt.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/samplefmt.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/sha.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/sha.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/sha512.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/sha512.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/stereo3d.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/stereo3d.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/tea.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/tea.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/threadmessage.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/threadmessage.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/time.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/fftime.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/timecode.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/timecode.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/timestamp.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/timestamp.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/tree.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/tree.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/twofish.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/twofish.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavutil/xtea.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/xtea.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libpostproc/postprocess.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libpostproc/postprocess.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libpostproc/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libpostproc/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libswresample/swresample.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libswresample/swresample.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libswresample/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libswresample/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libswscale/swscale.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libswscale/swscale.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libswscale/version.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libswscale/version.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libavcodec.a" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/lib/libavcodec.a" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libavdevice.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libavfilter.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libavformat.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libavutil.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libpostproc.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libswresample.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/lib/libswscale.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/x264-iOS/include/x264.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/x264-iOS/include/x264_config.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/x264-iOS/lib/libx264.a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Packetizer.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Packetizer.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Packetizer.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Packetizer.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IPixleBuffer.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IPixleBuffer.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Muxer/flv_muxer.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Muxer/flv_muxer.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Muxer/flv_muxer.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Muxer/flv_muxer.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/PixelBuffer.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/PixelBuffer.cpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/PixelBuffer.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/PixelBuffer.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IAudioMixer.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IAudioMixer.hpp" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IMetaData.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IMetaData.hpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
       <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_0c0b0d4e13d59c1b23b517e96f72f9b84209da19" />
   <component name="FileColors">
     <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
     <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
@@ -191,24 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ABSSimpleSession.mm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ABSSimpleSession.mm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+            <state relative-caret-position="122">
+              <caret line="151" column="50" lean-forward="true" selection-start-line="151" selection-start-column="50" selection-end-line="151" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewController.mm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ABSSimpleSession.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewController.mm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1504">
-              <caret line="94" column="41" lean-forward="false" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+            <state relative-caret-position="231">
+              <caret line="33" column="95" lean-forward="true" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
               <folding>
                 <element signature="e#296#320#0" expanded="true" />
-                <element signature="e#1915#3184#0" expanded="true" />
+                <element signature="e#2007#3280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,7 +61,7 @@
       <file leaf-file-name="MicSource.mm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
+            <state relative-caret-position="1904">
               <caret line="119" column="78" lean-forward="false" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
               <folding>
                 <element signature="e#130#152#0" expanded="true" />
@@ -226,20 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreAudioTypes.h" pinned="false" current-in-tab="false">
-        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6160">
-              <caret line="385" column="4" lean-forward="false" selection-start-line="385" selection-start-column="4" selection-end-line="385" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="opus_encoder.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="1104">
               <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="23" />
               <folding>
                 <element signature="e#340#363#0" expanded="true" />
@@ -251,8 +85,8 @@
       <file leaf-file-name="opus_encoder.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4288">
-              <caret line="268" column="29" lean-forward="true" selection-start-line="268" selection-start-column="29" selection-end-line="268" selection-end-column="29" />
+            <state relative-caret-position="1398">
+              <caret line="220" column="16" lean-forward="true" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
               <folding>
                 <element signature="e#90#115#0" expanded="true" />
               </folding>
@@ -263,8 +97,8 @@
       <file leaf-file-name="byte_buffer_queue.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="464">
+              <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -273,7 +107,7 @@
       <file leaf-file-name="avformat.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/avformat.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
+            <state relative-caret-position="33120">
               <caret line="2070" column="10" lean-forward="false" selection-start-line="2070" selection-start-column="10" selection-end-line="2070" selection-end-column="10" />
               <folding />
             </state>
@@ -370,12 +204,13 @@
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/encode_audio.c" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.cpp" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.h" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
       </list>
     </option>
   </component>
@@ -387,7 +222,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="218" />
+    <option name="x" value="132" />
     <option name="y" value="23" />
     <option name="width" value="1188" />
     <option name="height" value="877" />
@@ -407,6 +242,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -432,39 +268,10 @@
               <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
               <item name="Encode" type="fcab9f18:XcodeViewNode" />
             </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
-              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="EncodeTestTool" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
-              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="iOSource" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
-              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="Muxer" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
-              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
-              <item name="Utility" type="fcab9f18:XcodeViewNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -535,20 +342,22 @@
       <workItem from="1514510097803" duration="23000" />
       <workItem from="1514510163219" duration="25367000" />
       <workItem from="1514715080633" duration="21613000" />
-      <workItem from="1514887419922" duration="1968000" />
+      <workItem from="1514887419922" duration="2994000" />
+      <workItem from="1514946527186" duration="1375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212723000" />
+    <option name="totallyTimeSpent" value="215124000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="218" y="23" width="1188" height="877" extended-state="0" />
+    <frame x="132" y="23" width="1188" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2159383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38235295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4488491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -558,7 +367,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49232736" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38235295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -596,25 +404,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp</url>
-          <line>116</line>
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="119" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/mem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="184" column="6" lean-forward="false" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/error.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -711,7 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3072">
           <caret line="192" column="44" lean-forward="false" selection-start-line="192" selection-start-column="44" selection-end-line="192" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#90#120#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7664">
           <caret line="479" column="47" lean-forward="false" selection-start-line="479" selection-start-column="47" selection-end-line="479" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,17 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="94" column="41" lean-forward="false" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
-          <folding>
-            <element signature="e#296#320#0" expanded="true" />
-            <element signature="e#1915#3184#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,7 +702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="1904">
           <caret line="119" column="78" lean-forward="false" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
           <folding>
             <element signature="e#130#152#0" expanded="true" />
@@ -937,7 +712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="1104">
           <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="23" />
           <folding>
             <element signature="e#340#363#0" expanded="true" />
@@ -947,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/avformat.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="33120">
           <caret line="2070" column="10" lean-forward="false" selection-start-line="2070" selection-start-column="10" selection-end-line="2070" selection-end-column="10" />
           <folding />
         </state>
@@ -955,27 +730,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state relative-caret-position="464">
+          <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4288">
-          <caret line="268" column="29" lean-forward="true" selection-start-line="268" selection-start-column="29" selection-end-line="268" selection-end-column="29" />
+        <state relative-caret-position="1398">
+          <caret line="220" column="16" lean-forward="true" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
           <folding>
             <element signature="e#90#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+        <state relative-caret-position="122">
+          <caret line="151" column="50" lean-forward="true" selection-start-line="151" selection-start-column="50" selection-end-line="151" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="33" column="95" lean-forward="true" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
+          <folding>
+            <element signature="e#296#320#0" expanded="true" />
+            <element signature="e#2007#3280#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

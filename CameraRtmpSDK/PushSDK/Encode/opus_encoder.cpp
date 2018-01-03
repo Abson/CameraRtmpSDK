@@ -105,7 +105,7 @@ namespace push_sdk { namespace ffmpeg {
 
       /* Set the basic encoder parameters.
        * The input file's sample rate is used to avoid a sample rate conversion. */
-//      avctx->channel_layout = static_cast<uint64_t>(av_get_default_channel_layout());
+      // avctx->channel_layout = static_cast<uint64_t>(av_get_default_channel_layout());
       avctx->channel_layout = AV_CH_LAYOUT_STEREO;
       avctx->channels       = av_get_channel_layout_nb_channels(avctx->channel_layout);
       avctx->sample_rate    = sample_rate_;

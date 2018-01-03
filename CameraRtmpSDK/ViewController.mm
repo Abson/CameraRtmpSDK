@@ -30,7 +30,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:16000 channelCount:2];
+  self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:16000 bitRate:8000
+                                                      channelCount:2 encode:ABSEncodeTypeOpus];
   self.session.delegate = self;
 
   UIButton* record = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 50)];
@@ -68,7 +69,8 @@
     NSString* path2 = [[NSBundle mainBundle] pathForResource:@"audio2.wav" ofType:nil];
     NSString* path3 = [[NSBundle mainBundle] pathForResource:@"audio3.wav" ofType:nil];
     NSString* path4 = [[NSBundle mainBundle] pathForResource:@"audio4.wav" ofType:nil];
-    NSString* outputPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject stringByAppendingPathComponent:@"audio127.wav"];
+    NSString* outputPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).lastObject
+    stringByAppendingPathComponent:@"audio127.wav"];
     
     const char* input1 = [path1 cStringUsingEncoding:NSUTF8StringEncoding];
     const char* input2 = [path2 cStringUsingEncoding:NSUTF8StringEncoding];
