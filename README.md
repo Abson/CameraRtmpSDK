@@ -72,7 +72,6 @@ std::vector<std::string> inputs{std::string(input1), std::string(input2)};
 
 PushSDK::ffmpeg::audio_mixer mixer(inputs, output);
 mixer.StartMixAudio();
-std::cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS_PER_SEC*1000<<"ms"<< std::endl;//
 ```
 
 ### Update
