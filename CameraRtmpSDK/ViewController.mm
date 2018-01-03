@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:16000 bitRate:8000
+  self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:16000 bitRate:16000
                                                       channelCount:2 encode:ABSEncodeTypeOpus];
   self.session.delegate = self;
 

@@ -30,55 +30,59 @@ extern "C" {
 namespace push_sdk { namespace ffmpeg {
 
     class AACEncoder : public IEncoder {
-        
+
     public:
 
-        AACEncoder(int frequencyInHz, int channelCount, int bitrate, const std::string& filename = "");
+      AACEncoder(int frequencyInHz, int channelCount, int bitrate, const std::string& filename = "");
 
-        ~AACEncoder();
+      ~AACEncoder();
 
-        void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata);
+    public:
+      void set_epoch(const std::chrono::steady_clock::time_point epoch) override {}
 
-        void setOutput(std::shared_ptr<IOutput> output);
+      void PushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata) override;
 
-        void setBitrate(int bitrate) {  m_birerate = bitrate; }
+      void stop();
+    public:
+      void set_output(std::shared_ptr<IOutput> output) override {m_output = output;};
 
-        const int bitrate() const { return m_birerate; }
+    public:
+      void set_bitrate(int bitrate) override {  m_birerate = bitrate; }
 
-        void stop();
+      const int bitrate() const override { return m_birerate; }
 
     private:
-        void initAudioResample();
-        void audioResample(const AVFrame& coverFrame);
-        
-        AVFrame*
-        create_av_frame( const int nb_samples, enum AVSampleFormat sample_fmt, uint64_t channel_layout, int sample_rate);
+      void initAudioResample();
+      void audioResample(const AVFrame& coverFrame);
+
+      AVFrame*
+      create_av_frame( const int nb_samples, enum AVSampleFormat sample_fmt, uint64_t channel_layout, int sample_rate);
     private:
 
-        std::weak_ptr<IOutput> m_output;
+      std::weak_ptr<IOutput> m_output;
 
-        int m_birerate;
+      int m_birerate;
 
-        AVCodec* codec_;
-        AVCodecContext* code_ctx_;
-        AVFrame* frame_;
-        AVFrame* conver_frame_;
-        AVPacket pkt_;
-        SwrContext* swr_ctx_;
+      AVCodec* codec_;
+      AVCodecContext* code_ctx_;
+      AVFrame* frame_;
+      AVFrame* conver_frame_;
+      AVPacket pkt_;
+      SwrContext* swr_ctx_;
 
-        uint8_t* samples_;
-        uint8_t** convert_data_;
+      uint8_t* samples_;
+      uint8_t** convert_data_;
 
-        int m_framecnt;
+      int m_framecnt;
 
     private: // 测试专用
-        FILE* m_file;
+      FILE* m_file;
 
-        AVFormatContext* m_fmtCtx;
-        AVStream* m_stream;
-        AVOutputFormat* m_outfmt;
+      AVFormatContext* m_fmtCtx;
+      AVStream* m_stream;
+      AVOutputFormat* m_outfmt;
     };
-}
+  }
 }
 
 

@@ -5,17 +5,19 @@
 
 #include "opus_encoder.h"
 #include "utility.h"
-#include "avassert.h"
+#include "code_run_time.h"
 
 namespace push_sdk { namespace ffmpeg {
 
+    static evaluate::code_run_time opus_encoder_run_timer;
+    static std::vector<long> opus_encoder_run_times;
 
     OpusEncoder::OpusEncoder(int frequencyInHz,
         int channelCount,
         int bitrate,
         const std::string& filename) : output_file_(nullptr), stream_(nullptr), output_fmt_ctx_(nullptr),
                                        output_codec_ctx_(nullptr), sample_rate_(frequencyInHz),
-                                       bit_rate_(bitrate) {
+                                       bit_rate_(bitrate), channels(channelCount){
 
       av_register_all();
 
@@ -106,7 +108,7 @@ namespace push_sdk { namespace ffmpeg {
       /* Set the basic encoder parameters.
        * The input file's sample rate is used to avoid a sample rate conversion. */
       // avctx->channel_layout = static_cast<uint64_t>(av_get_default_channel_layout());
-      avctx->channel_layout = AV_CH_LAYOUT_STEREO;
+      avctx->channel_layout = channels >= 2 ? AV_CH_LAYOUT_STEREO : AV_CH_LAYOUT_MONO; // 要么单声道，要么双声道
       avctx->channels       = av_get_channel_layout_nb_channels(avctx->channel_layout);
       avctx->sample_rate    = sample_rate_;
       avctx->sample_fmt     = AV_SAMPLE_FMT_S16;
@@ -154,27 +156,39 @@ namespace push_sdk { namespace ffmpeg {
     }
 
     void
-    OpusEncoder::pushBuffer(const uint8_t *const data, size_t size, const IMetadata &metadata) {
+    OpusEncoder::PushBuffer(const uint8_t *const data, size_t size, const IMetadata &metadata) {
 
       int data_present = 0;
 
       buffer_queue_.Write(data, size);
 
       while ( buffer_queue_.availableBytes() >= GetBytesPerFrame(output_codec_ctx_)) {
-
         size_t bytes_pre_frame = static_cast<size_t>(GetBytesPerFrame(output_codec_ctx_));
-        EncodeAudioFrame(buffer_queue_.Read(bytes_pre_frame), frame_, output_file_, output_fmt_ctx_, output_codec_ctx_, &data_present);
+
+        /* Packet used for temporary storage.*/
+        AVPacket packet;
+        InitPacket(&packet);
+        int ret = EncodeAudioFrame(buffer_queue_.Read(bytes_pre_frame), frame_, &packet, output_fmt_ctx_,
+            output_codec_ctx_, &data_present);
+
+        if (ret == 0 && data_present) {
+          /* Write one audio frame from the temporary packet to the output file. */
+          packet.stream_index = stream_->index;
+          int error = WriteOutputFileFrame(output_fmt_ctx_, packet);
+          if (error != 0) {
+            fprintf(stderr, "Could not write a frame (error '%s')\n",
+                av_err2str(error));
+            break;
+          }
+        }
       }
     }
 
     int
-    OpusEncoder::EncodeAudioFrame(uint8_t *buffer, AVFrame *frame, FILE *output_file,
+    OpusEncoder::EncodeAudioFrame(uint8_t *buffer, AVFrame *frame, AVPacket* packet,
         AVFormatContext *output_fmt_ctx, AVCodecContext *output_codec_ctx, int *data_present) {
 
-      /* Packet used for temporary storage. */
-      AVPacket output_packet;
       int error;
-      InitPacket(&output_packet);
 
       if (frame) {
 
@@ -187,27 +201,22 @@ namespace push_sdk { namespace ffmpeg {
         pts_ += frame->nb_samples;
       }
 
+      /** Test opus audio encoding time required */
+      opus_encoder_run_timer.StartClock();
+
       /* Encode the audio frame and store it in the temporary packet.
        * The output audio stream encoder is used to do this. */
-      if ((error = avcodec_encode_audio2(output_codec_ctx, &output_packet,
+      if ((error = avcodec_encode_audio2(output_codec_ctx, packet,
           frame, data_present)) < 0) {
         fprintf(stderr, "Could not encode frame (error '%s')\n",
             av_err2str(error));
-        av_packet_unref(&output_packet);
+        av_packet_unref(packet);
         return error;
       }
 
-      /* Write one audio frame from the temporary packet to the output file. */
-      if (data_present) {
-        output_packet.stream_index = stream_->index;
-
-        error = WriteOutputFileFrame(output_fmt_ctx, output_packet);
-        if (error != 0) {
-          fprintf(stderr, "Could not write a frame (error '%s')\n",
-              av_err2str(error));
-          return error;
-        }
-      }
+      /** Test opus audio encoding time required */
+      opus_encoder_run_timer.EndClock();
+      opus_encoder_run_times.push_back(opus_encoder_run_timer.Result());
 
       return 0;
     }
@@ -217,7 +226,7 @@ namespace push_sdk { namespace ffmpeg {
       *packet = av_packet_alloc();
       /** Set the packet data and size so that it is recognized as being empty. */
       if (!(*packet)) {
-        fprintf(stderr, "could not allocate the packet\n");
+        fprintf(stderr, "Could not allocate the packet\n");
         exit(1);
       }
       (*packet)->size = 0;
@@ -253,7 +262,7 @@ namespace push_sdk { namespace ffmpeg {
      * Initialize one data packet for reading or writing.
      * @param packet Packet to be initialized
      */
-    void OpusEncoder::InitPacket(AVPacket *packet)
+    void OpusEncoder::InitPacket(AVPacket* packet)
     {
       av_init_packet(packet);
       /* Set the packet data and size so that it is recognized as being empty. */
@@ -267,7 +276,7 @@ namespace push_sdk { namespace ffmpeg {
       buffer_queue_.ThrowAway();
 
       /* flush the encoder */
-      flush_encoder(0);
+      FlushEncoder(0);
 
       WriteOutputFileTrailer(output_fmt_ctx_);
 
@@ -277,36 +286,32 @@ namespace push_sdk { namespace ffmpeg {
       avcodec_close(output_codec_ctx_);
       avcodec_free_context(&output_codec_ctx_);
       avformat_free_context(output_fmt_ctx_);
+
+      /** Test opus audio encoding time required */
+      double time = evaluate::AverageCodeRuntime(opus_encoder_run_times);
+      std::cout << "opus encoding a frame take " << time/1000 << "μs of time" << std::endl;
     }
 
     int
-    OpusEncoder::flush_encoder(unsigned int stream_index)
+    OpusEncoder::FlushEncoder(unsigned int stream_index)
     {
       int ret;
-      int got_frame;
+      int got_frame = 0;
       AVPacket enc_pkt;
       if (!(output_codec_ctx_->codec->capabilities &
           CODEC_CAP_DELAY))
         return 0;
       while (1) {
-        enc_pkt.data = NULL;
-        enc_pkt.size = 0;
-        av_init_packet(&enc_pkt);
-        ret = avcodec_encode_audio2 (output_codec_ctx_, &enc_pkt,
-            NULL, &got_frame);
-        av_frame_free(NULL);
-        if (ret < 0)
+        InitPacket(&enc_pkt);
+        ret = EncodeAudioFrame(nullptr, nullptr, &enc_pkt, output_fmt_ctx_, output_codec_ctx_,
+            &got_frame);
+        if (ret != 0)
           break;
-        if (!got_frame){
-          ret=0;
+        if (!got_frame) {
+          ret = 0;
           break;
         }
         printf("Flush Encoder: Succeed to encode 1 frame!\tsize:%5d\n",enc_pkt.size);
-        /* mux encoded frame */
-        ret = av_write_frame(output_fmt_ctx_, &enc_pkt);
-        if (ret < 0) {
-          break;
-        }
       }
       return ret;
     }
@@ -343,7 +348,7 @@ namespace push_sdk { namespace ffmpeg {
         return error;
       }
 
-      av_log(nullptr, AV_LOG_INFO, "Succeed to encode 1 frame! \tsize:%5d\n",output_packet.size);
+      av_log(nullptr, AV_LOG_INFO, "Succeed to write 1 frame! \tsize:%5d\n",output_packet.size);
 
       av_packet_unref(&output_packet);
 
@@ -377,7 +382,7 @@ namespace push_sdk { namespace ffmpeg {
       }
 
       //Flush Encoder
-      int ret = flush_encoder(0);
+      int ret = FlushEncoder(0);
       if (ret < 0) {
         printf("Flushing encoder failed\n");
         return -1;

@@ -147,7 +147,7 @@ namespace push_sdk {  namespace Apple {
       if (!m_output  ) { return;}
       if (CVPixelBufferLockBaseAddress(pb, 0) == kCVReturnSuccess) {
 
-        m_output->pushBuffer((uint8_t*)pb, CVPixelBufferGetDataSize(pb));
+        m_output->PushBuffer((uint8_t *) pb, CVPixelBufferGetDataSize(pb));
       }
       CVPixelBufferUnlockBaseAddress(pb, 0);
     }

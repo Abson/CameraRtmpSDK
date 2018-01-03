@@ -41,18 +41,21 @@ namespace push_sdk { namespace ffmpeg {
       ~H264Encode();
 
     public:
-      void setOutput(std::shared_ptr<IOutput> output) override {m_output = output;}
+      void set_output(std::shared_ptr<IOutput> output) override {m_output = output;}
 
       // Input is expecting a CVPixelBufferRef
-      void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata) override;
+      void PushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata) override;
 
       void stop() override;
 
     public:
 
-      void setBitrate(int bitrate) override;
+      void set_bitrate(int bitrate) override;
 
       const int bitrate() const override { return m_bitrate; }
+
+    public:
+      void set_epoch(const std::chrono::steady_clock::time_point epoch) override {}
 
     public:
 

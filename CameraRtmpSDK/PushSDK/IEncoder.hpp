@@ -18,7 +18,7 @@ namespace push_sdk {
     public:
         virtual ~IEncoder() {};
 
-        virtual void setBitrate(int bitrate) = 0;
+        virtual void set_bitrate(int bitrate) = 0;
         virtual const int bitrate() const = 0;
     };
 }

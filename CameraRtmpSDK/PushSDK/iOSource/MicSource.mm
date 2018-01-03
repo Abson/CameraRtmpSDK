@@ -172,7 +172,7 @@ namespace push_sdk { namespace Apple {
         /* Write to file to test pcm whether available */
         WritePCMFileTest(data, data_size, 10);
 
-        output->pushBuffer(data, data_size, md);
+        output->PushBuffer(data, data_size, md);
       }
     }
 

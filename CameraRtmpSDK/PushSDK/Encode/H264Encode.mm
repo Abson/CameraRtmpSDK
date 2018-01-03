@@ -196,7 +196,7 @@ namespace push_sdk { namespace  ffmpeg {
     }
 
     void
-    H264Encode::pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata)
+    H264Encode::PushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata)
     {
       CVPixelBufferRef imageBuffer = (CVPixelBufferRef)data;
 
@@ -255,7 +255,7 @@ namespace push_sdk { namespace  ffmpeg {
     }
 
     void
-    H264Encode::setBitrate(int bitrate)
+    H264Encode::set_bitrate(int bitrate)
     {
       if (m_bitrate == bitrate) { return;}
 

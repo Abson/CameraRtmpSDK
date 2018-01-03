@@ -306,13 +306,7 @@ namespace push_sdk { namespace ffmpeg {
     }
 
     void
-    AACEncoder::setOutput(std::shared_ptr<IOutput> output)
-    {
-      m_output = output;
-    }
-
-    void
-    AACEncoder::pushBuffer(const uint8_t *const data, size_t size, const IMetadata &metadata)
+    AACEncoder::PushBuffer(const uint8_t *const data, size_t size, const IMetadata &metadata)
     {
       av_init_packet(&pkt_);
       pkt_.data = nullptr;

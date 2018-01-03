@@ -32,25 +32,28 @@ namespace push_sdk { namespace ffmpeg {
        * @param bitrate 比特率
        * @param filename 编码成功后的文件名，可用 .gg 文件后序，这样使用 chrome 浏览器便可播放
        */
-      OpusEncoder(int frequencyInHz = 48000, int channelCount = 2, int bitrate = 16000, const std::string& filename = "");
+      OpusEncoder(int frequencyInHz = 48000, int channelCount = 2, int bitrate = 16000,
+          const std::string& filename = "");
+
       ~OpusEncoder() {}
 
     public:
-      void setBitrate(int bitrate) override { bit_rate_ = bitrate; };
+      void set_bitrate(int bitrate) override { bit_rate_ = bitrate; };
 
       const int bitrate() const override { return bit_rate_; }
 
     public:
-      void setOutput(std::shared_ptr<IOutput>output) override { output_ = output; };
+      void set_output(std::shared_ptr<IOutput> output) override { output_ = output; };
 
     public:
-      void setEpoch(const std::chrono::steady_clock::time_point epoch) override {};
+      void set_epoch(const std::chrono::steady_clock::time_point epoch) override {};
 
-      void pushBuffer(const uint8_t* const data, size_t size, const IMetadata& metadata = IMetadata());
+      void PushBuffer(const uint8_t *const data, size_t size, const IMetadata &metadata = IMetadata());
 
       void stop();
 
     public:
+      /* the api for test, you can use the file named "tdjm.pcm" in pcm_in_file parameter*/
       int Test(const char *pcm_in_file);
 
     private:
@@ -59,6 +62,7 @@ namespace push_sdk { namespace ffmpeg {
 
       int bit_rate_ = 0;
       int sample_rate_ = 0;
+      int channels = 0;
 
       std::weak_ptr<IOutput> output_;
 
@@ -71,8 +75,6 @@ namespace push_sdk { namespace ffmpeg {
 
       buffer::BufferQueue buffer_queue_;
 
-      int stream_idx_;
-
       /* Global timestamp for the audio frames. */
       int64_t pts_ = 0;
 
@@ -82,9 +84,9 @@ namespace push_sdk { namespace ffmpeg {
 
       int InitFrame(AVFrame **frame, AVCodecContext *output_codec_ctx);
 
-      int EncodeAudioFrame(uint8_t *buffer, AVFrame *frame, FILE *output_file, AVFormatContext *output_fmt_ctx, AVCodecContext *output_codec_ctx, int *data_present);
+      int EncodeAudioFrame(uint8_t *buffer, AVFrame *frame, AVPacket *packet, AVFormatContext *output_fmt_ctx, AVCodecContext *output_codec_ctx, int *data_present);
 
-      int flush_encoder(unsigned int stream_index);
+      int FlushEncoder(unsigned int stream_index);
 
       int WriteOutputFileTrailer(AVFormatContext *output_fmt_ctx);
 

@@ -4,9 +4,17 @@
     <list default="true" id="1403f2b0-3859-45b9-890c-077d09f6b34a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/hejiancong.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hejiancong.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h" />
-      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" />
       <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.mm" />
+      <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" />
       <change beforePath="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" afterPath="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,6 +23,48 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="opus_encoder.cpp" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-3047">
+                    <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+                    <folding>
+                      <element signature="e#90#115#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="frame.h" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/frame.h">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="258">
+                    <caret line="266" column="8" lean-forward="false" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="channel_layout.h" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/channel_layout.h">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="338">
+                    <caret line="90" column="24" lean-forward="false" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_0c0b0d4e13d59c1b23b517e96f72f9b84209da19" />
   <component name="FileColors">
@@ -28,18 +78,8 @@
       <file leaf-file-name="ABSSimpleSession.mm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="151" column="50" lean-forward="true" selection-start-line="151" selection-start-column="50" selection-end-line="151" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ABSSimpleSession.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="188">
+              <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,11 +88,10 @@
       <file leaf-file-name="ViewController.mm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="33" column="95" lean-forward="true" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
+            <state relative-caret-position="1216">
+              <caret line="80" column="57" lean-forward="true" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
               <folding>
                 <element signature="e#296#320#0" expanded="true" />
-                <element signature="e#2007#3280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,8 +100,8 @@
       <file leaf-file-name="MicSource.mm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="119" column="78" lean-forward="false" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
+            <state relative-caret-position="3020">
+              <caret line="208" column="40" lean-forward="false" selection-start-line="208" selection-start-column="40" selection-end-line="208" selection-end-column="40" />
               <folding>
                 <element signature="e#130#152#0" expanded="true" />
               </folding>
@@ -70,11 +109,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="H264Encode.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="opus_encoder.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="23" />
+            <state relative-caret-position="928">
+              <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="21" />
               <folding>
                 <element signature="e#340#363#0" expanded="true" />
               </folding>
@@ -82,33 +131,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus_encoder.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp">
+      <file leaf-file-name="avcodec.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/avcodec.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1398">
-              <caret line="220" column="16" lean-forward="true" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
-              <folding>
-                <element signature="e#90#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="byte_buffer_queue.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="598">
+              <caret line="2521" column="20" lean-forward="true" selection-start-line="2521" selection-start-column="20" selection-end-line="2521" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="avformat.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/avformat.h">
+      <file leaf-file-name="H264Encode.mm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33120">
-              <caret line="2070" column="10" lean-forward="false" selection-start-line="2070" selection-start-column="10" selection-end-line="2070" selection-end-column="10" />
+            <state relative-caret-position="151">
+              <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -117,8 +154,8 @@
       <file leaf-file-name="IEncoder.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="167">
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -127,8 +164,18 @@
       <file leaf-file-name="ITransform.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="199">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IOutput.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -138,16 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>InitSample`</find>
-      <find>WriteOutputFileTrailer</find>
-      <find>Could not encode fram</find>
-      <find>Could not write a fram</find>
-      <find>goto</find>
-      <find>cleanup</find>
-      <find>output_codec_ctx</find>
-      <find>buffer</find>
-      <find>wr</find>
-      <find>Could not write frame</find>
       <find>stream</find>
       <find>data</find>
       <find>Examp</find>
@@ -168,6 +205,16 @@
       <find>res</find>
       <find>stream_</find>
       <find>output_fmt_ctx</find>
+      <find>EncodeAudioFrame</find>
+      <find>Could not encode frame</find>
+      <find>Success</find>
+      <find>success</find>
+      <find>WritePCMFileTest</find>
+      <find>frame_size</find>
+      <find>nb_sample</find>
+      <find>sample_rate</find>
+      <find>nb_sam</find>
+      <find>channel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,14 +237,10 @@
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Evaluate/code_run_time.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Evaluate/code_run_time.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/CameraSource.mm" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/main.m" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/FFmpeg-iOS/include/libavcodec/avcodec.h" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IMetaData.hpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/OpusEncoder.h" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/utility.h" />
@@ -205,11 +248,17 @@
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/encode_audio.c" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.h" />
-        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h" />
+        <option value="$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp" />
         <option value="$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm" />
       </list>
     </option>
@@ -222,7 +271,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="132" />
+    <option name="x" value="169" />
     <option name="y" value="23" />
     <option name="width" value="1188" />
     <option name="height" value="877" />
@@ -267,6 +316,20 @@
               <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
               <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
               <item name="Encode" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
+              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
+              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
+              <item name="iOSource" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="CameraRtmpSDK" type="1d218c8b:XcodeProjectNode" />
+              <item name="CameraRtmpSDK" type="fcab9f18:XcodeViewNode" />
+              <item name="PushSDK" type="fcab9f18:XcodeViewNode" />
+              <item name="Mixer" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
           <select />
@@ -343,28 +406,28 @@
       <workItem from="1514510163219" duration="25367000" />
       <workItem from="1514715080633" duration="21613000" />
       <workItem from="1514887419922" duration="2994000" />
-      <workItem from="1514946527186" duration="1375000" />
+      <workItem from="1514946527186" duration="14777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215124000" />
+    <option name="totallyTimeSpent" value="228526000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="132" y="23" width="1188" height="877" extended-state="0" />
+    <frame x="169" y="23" width="1188" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2159383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2159383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38235295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4488491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20788825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20736933" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49232736" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39641944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -404,60 +467,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="119" />
+      <option name="time" value="130" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/error.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/sys/errno.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libswresample/swresample.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="305" column="4" lean-forward="false" selection-start-line="305" selection-start-column="4" selection-end-line="305" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/transforms/IMetaData.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioUnitProperties.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="771" column="2" lean-forward="false" selection-start-line="771" selection-start-column="2" selection-end-line="771" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/utility.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -505,13 +519,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="511" column="14" lean-forward="false" selection-start-line="511" selection-start-column="14" selection-end-line="511" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -566,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3072">
@@ -584,6 +585,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -606,6 +608,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -616,18 +619,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="251" column="7" lean-forward="false" selection-start-line="251" selection-start-column="7" selection-end-line="251" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Utility/byte_buffer_queue.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#120#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -635,14 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5200">
-          <caret line="325" column="32" lean-forward="false" selection-start-line="325" selection-start-column="32" selection-end-line="325" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,57 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/channel_layout.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/avcodec.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="3924" column="7" lean-forward="true" selection-start-line="3924" selection-start-column="7" selection-end-line="3924" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="119" column="78" lean-forward="false" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
-          <folding>
-            <element signature="e#130#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="23" />
-          <folding>
-            <element signature="e#340#363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavformat/avformat.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33120">
@@ -736,16 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1398">
-          <caret line="220" column="16" lean-forward="true" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
-          <folding>
-            <element signature="e#90#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -754,21 +683,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/H264Packetizer.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Mixer/audio_mixer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Evaluate/code_run_time.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="50" column="20" lean-forward="false" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="4446" column="27" lean-forward="false" selection-start-line="4446" selection-start-column="27" selection-end-line="4446" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/AACEncoder.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233">
+          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IOutput.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ITransform.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/IEncoder.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/ABSSimpleSession.mm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="151" column="50" lean-forward="true" selection-start-line="151" selection-start-column="50" selection-end-line="151" selection-end-column="50" />
+        <state relative-caret-position="188">
+          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/frame.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="266" column="8" lean-forward="false" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavcodec/avcodec.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="2521" column="20" lean-forward="true" selection-start-line="2521" selection-start-column="20" selection-end-line="2521" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Lib/FFmpeg-iOS/include/libavutil/channel_layout.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="90" column="24" lean-forward="false" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="21" />
+          <folding>
+            <element signature="e#340#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/H264Encode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/iOSource/MicSource.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3020">
+          <caret line="208" column="40" lean-forward="false" selection-start-line="208" selection-start-column="40" selection-end-line="208" selection-end-column="40" />
+          <folding>
+            <element signature="e#130#152#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/ViewController.mm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="33" column="95" lean-forward="true" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
+        <state relative-caret-position="1216">
+          <caret line="80" column="57" lean-forward="true" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
           <folding>
             <element signature="e#296#320#0" expanded="true" />
-            <element signature="e#2007#3280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CameraRtmpSDK/PushSDK/Encode/opus_encoder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3047">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
