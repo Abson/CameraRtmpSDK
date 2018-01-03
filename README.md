@@ -69,10 +69,8 @@ const char* output = [outputPath cStringUsingEncoding:NSUTF8StringEncoding];
 
 std::vector<std::string> inputs{std::string(input1), std::string(input2)};
 
-clock_t start_time = clock();
 PushSDK::ffmpeg::audio_mixer mixer(inputs, output);
 mixer.StartMixAudio();
-clock_t end_time= clock();
 std::cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS_PER_SEC*1000<<"ms"<< std::endl;//
 ```
 
