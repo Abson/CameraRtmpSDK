@@ -1,8 +1,7 @@
-### A iOS project be used for recording video stream in real time
+### Which is CameraRtmpSDK
 
-This project was created base in ffmpeg, which code with c++ as far as possible. By sampling and resampling the video stream, we encode the video/audio stream to H.264/AAC.
-And also, we create H.264/AAC parser to help us understand that structure.
-hope it can help you.
+CameraRtmpSDK is an audio and video based on ffmpeg SDK, is committed to creating a cross-platform audio and video sampling, encoding, mixing, protocol upload program.
+But all current creation is based on the iOS platform and CameraRtmpSDK was coded by c++.
 
 ### Blog to Introduction
 
@@ -33,27 +32,24 @@ self.session.delegate = self;
 **if you want to test audio for AAC (AAC编码)**
 
 ```object-c
-self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:44100. channelCount:2];
+self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:16000 bitRate:16000
+                                                      channelCount:2 encode:ABSEncodeTypeAAC];
 self.session.delegate = self;
 [self.session startAudioRecord];
 
 // close it 
 [self.session endAudioRecord];
 ```
+
 **if you want to test audio for Opus (Opus编码)**
 ```
-file ABSSimpleSession.m
-modify the method of the file for ABSSimpleSession
+self.session = [[ABSSimpleSession alloc] initWithAudioSampleRate:16000 bitRate:16000
+                                                      channelCount:2 encode:ABSEncodeTypeOpus];
+self.session.delegate = self;
+[self.session startAudioRecord];
 
-- (void)startAudioRecord
-{
-  NSString* filePath = [self randomOpusPath];
-
-  const char* file_path = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
-  opusEncoder_ = std::make_shared<push_sdk::ffmpeg::OpusEncoder>(self.audioSampleRate, self.audioChannelCount, 96000, file_path);
-  micSource_->setOutput(opusEncoder_);
-  micSource_->start();
-}
+// close it 
+[self.session endAudioRecord];
 ```
 
 
